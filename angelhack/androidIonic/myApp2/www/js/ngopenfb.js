@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Language" content="en">
     
     
-    <title>ionic-tutorial/ngopenfb.js at master · ccoenraets/ionic-tutorial</title>
+    <title>OpenFB/ngopenfb.js at master · ccoenraets/OpenFB</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
@@ -18,12 +18,12 @@
     <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
     <meta property="fb:app_id" content="1401488693436528">
 
-      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="ccoenraets/ionic-tutorial" name="twitter:title" /><meta content="ionic-tutorial - Ionic Tutorial" name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/384156?v=3&amp;s=400" name="twitter:image:src" />
-      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/384156?v=3&amp;s=400" property="og:image" /><meta content="ccoenraets/ionic-tutorial" property="og:title" /><meta content="https://github.com/ccoenraets/ionic-tutorial" property="og:url" /><meta content="ionic-tutorial - Ionic Tutorial" property="og:description" />
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="ccoenraets/OpenFB" name="twitter:title" /><meta content="OpenFB - Micro-library that lets you integrate browser and Cordova apps with Facebook with no plugin or SDK dependency." name="twitter:description" /><meta content="https://avatars2.githubusercontent.com/u/384156?v=3&amp;s=400" name="twitter:image:src" />
+      <meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars2.githubusercontent.com/u/384156?v=3&amp;s=400" property="og:image" /><meta content="ccoenraets/OpenFB" property="og:title" /><meta content="https://github.com/ccoenraets/OpenFB" property="og:url" /><meta content="OpenFB - Micro-library that lets you integrate browser and Cordova apps with Facebook with no plugin or SDK dependency." property="og:description" />
       <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
     <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
     <link rel="assets" href="https://assets-cdn.github.com/">
-    <link rel="web-socket" href="wss://live.github.com/_sockets/MTEwOTIyNjM6NTliMjg3NjI4YmIyMzU2MGRmOGZhNWVkN2M1MmVlMTA6OTMxM2IyMzUyNDJiM2M4MTQzNzE5ZjI4NzBlZmFmYzRlYjFlOTUwMWVmN2M1N2Q3NjU1MDExMWQ4MDZmNDA2MA==--0cc33ccc28871a297e96dda8fcb6027164112b1f">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MTEwOTIyNjM6MGU3ODdhMDU2NjIyYTIxMzJkNWZhZjM2N2ZiOWI0ZjU6MDQyZDQ1MWYyNDJjMjAzZTk3NTQ2ZmZjZTYyYzMwNTA4ZmFlNjZiNWFmNGE4NTJjNmFjYjY0OWYwODkyNzQwNg==--17d91fc7b36e166159b5d16ae31911dba6209ac5">
     <meta name="pjax-timeout" content="1000">
     <link rel="sudo-modal" href="/sessions/sudo_modal">
 
@@ -32,7 +32,7 @@
     <meta name="selected-link" value="repo_source" data-pjax-transient>
       <meta name="google-analytics" content="UA-3769691-2">
 
-    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="B6AD4942:1F59:221AE2D:557C1D93" name="octolytics-dimension-request_id" /><meta content="11092263" name="octolytics-actor-id" /><meta content="chriswzng" name="octolytics-actor-login" /><meta content="b15dbf914d5d93dc8c0b6297c3b03e9536dcf23ec5d229efb977e91fa904c638" name="octolytics-actor-hash" />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="76646C01:5FD6:35E435C:557C4E6D" name="octolytics-dimension-request_id" /><meta content="11092263" name="octolytics-actor-id" /><meta content="chriswzng" name="octolytics-actor-login" /><meta content="b15dbf914d5d93dc8c0b6297c3b03e9536dcf23ec5d229efb977e91fa904c638" name="octolytics-actor-hash" />
     
     <meta content="Rails, view, blob#show" name="analytics-event" />
     <meta class="js-ga-set" name="dimension1" content="Logged In">
@@ -46,7 +46,7 @@
 
 
     <meta content="authenticity_token" name="csrf-param" />
-<meta content="X4gjsYYnK+XmAyYfQuxEIy49d+YislO565L2xMaLx9pI8KcGbPuGFRelRiJBoA1mJSlPMmEgxh9SXSKsVPAPRQ==" name="csrf-token" />
+<meta content="3CEH1it6tiWw6fYX+JDPUAIHgc/zC39CnSgvv0umK5bn5YEOpoRDVM5SgoYVIshnofgN+cKzXgSfhEu+TB4xNA==" name="csrf-token" />
 
     <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github/index-10789d1d56bfe8c960a6caf2954ab053c3fac748d581415395f986779781b4a7.css" media="all" rel="stylesheet" />
     <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github2/index-8b4acc27f06d948d9a73d77849e0fe0b98d8636c85e2fe0e6c4b8762dec9fd3d.css" media="all" rel="stylesheet" />
@@ -57,11 +57,11 @@
     <meta http-equiv="x-pjax-version" content="62b85260d6deaadccdaa2c3c0e0b0c94">
 
       
-  <meta name="description" content="ionic-tutorial - Ionic Tutorial">
-  <meta name="go-import" content="github.com/ccoenraets/ionic-tutorial git https://github.com/ccoenraets/ionic-tutorial.git">
+  <meta name="description" content="OpenFB - Micro-library that lets you integrate browser and Cordova apps with Facebook with no plugin or SDK dependency.">
+  <meta name="go-import" content="github.com/ccoenraets/OpenFB git https://github.com/ccoenraets/OpenFB.git">
 
-  <meta content="384156" name="octolytics-dimension-user_id" /><meta content="ccoenraets" name="octolytics-dimension-user_login" /><meta content="21954394" name="octolytics-dimension-repository_id" /><meta content="ccoenraets/ionic-tutorial" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="21954394" name="octolytics-dimension-repository_network_root_id" /><meta content="ccoenraets/ionic-tutorial" name="octolytics-dimension-repository_network_root_nwo" />
-  <link href="https://github.com/ccoenraets/ionic-tutorial/commits/master.atom" rel="alternate" title="Recent Commits to ionic-tutorial:master" type="application/atom+xml">
+  <meta content="384156" name="octolytics-dimension-user_id" /><meta content="ccoenraets" name="octolytics-dimension-user_login" /><meta content="18521381" name="octolytics-dimension-repository_id" /><meta content="ccoenraets/OpenFB" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="18521381" name="octolytics-dimension-repository_network_root_id" /><meta content="ccoenraets/OpenFB" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/ccoenraets/OpenFB/commits/master.atom" rel="alternate" title="Recent Commits to OpenFB:master" type="application/atom+xml">
 
   </head>
 
@@ -83,7 +83,7 @@
 
 
       <div class="site-search repo-scope js-site-search" role="search">
-          <form accept-charset="UTF-8" action="/ccoenraets/ionic-tutorial/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/ccoenraets/ionic-tutorial/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+          <form accept-charset="UTF-8" action="/ccoenraets/OpenFB/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/ccoenraets/OpenFB/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
   <label class="js-chromeless-input-container form-control">
     <div class="scope-badge">This repository</div>
     <input type="text"
@@ -150,9 +150,9 @@
 
   <div class="dropdown-divider"></div>
   <div class="dropdown-header">
-    <span title="ccoenraets/ionic-tutorial">This repository</span>
+    <span title="ccoenraets/OpenFB">This repository</span>
   </div>
-    <a class="dropdown-item" href="/ccoenraets/ionic-tutorial/issues/new" data-ga-click="Header, create new issue">
+    <a class="dropdown-item" href="/ccoenraets/OpenFB/issues/new" data-ga-click="Header, create new issue">
       New issue
     </a>
 
@@ -194,7 +194,7 @@
           Settings
         </a>
 
-        <form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="i55NuAu/zvXWlkLxx0C7BgK4+08KPb+g7GQQmLHWW8uSM3/X02fGwn5YKtJuW7X63Xv2PfMmsdRja5mlEFo0FQ==" /></div>
+        <form accept-charset="UTF-8" action="/logout" class="logout-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="y72Av5IrYcrVd13Yh2ZW5yKOogZGQkiZs686V9JQ3XvM8UGGcC4uGgF6TgkcpOxNZUh8DqWC1xNAtHrBCOThVA==" /></div>
           <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -225,10 +225,10 @@
 <ul class="pagehead-actions">
 
   <li>
-      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="hklZdMYNoV2qTvh8oxACQchzAl7OC7VndMjPi/dWTICoy8T348Ov0sPcEcYhif3HdbLrOGYm+jsmZI2+3CUCGA==" /></div>    <input id="repository_id" name="repository_id" type="hidden" value="21954394" />
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Eexdf85eKf7iMjxsKy6ADsz8f/ihjPiIjmYpc0DoBX8/yzta7UdPJzjBJ/p7tvuVu7NIsWEBfTFDZ7Y4izhT+Q==" /></div>    <input id="repository_id" name="repository_id" type="hidden" value="18521381" />
 
       <div class="select-menu js-menu-container js-select-menu">
-        <a href="/ccoenraets/ionic-tutorial/subscription"
+        <a href="/ccoenraets/OpenFB/subscription"
           class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
           data-ga-click="Repository, click Watch settings, action:blob#show">
           <span class="js-select-button">
@@ -236,8 +236,8 @@
             Watch
           </span>
         </a>
-        <a class="social-count js-social-count" href="/ccoenraets/ionic-tutorial/watchers">
-          13
+        <a class="social-count js-social-count" href="/ccoenraets/OpenFB/watchers">
+          33
         </a>
 
         <div class="select-menu-modal-holder">
@@ -300,45 +300,45 @@
     
   <div class="js-toggler-container js-social-container starring-container ">
 
-    <form accept-charset="UTF-8" action="/ccoenraets/ionic-tutorial/unstar" class="js-toggler-form starred js-unstar-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="fZNBKkAWE8k/McSvQBW4AYVQexhRrbkMMp6xU00dU50bgcywxG3Mpk5CYvPkGKvwLjPslkkViIT22bD9PFrAvA==" /></div>
+    <form accept-charset="UTF-8" action="/ccoenraets/OpenFB/unstar" class="js-toggler-form starred js-unstar-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="zMeEbZCxk4GrWmP/MYH6KKW2FWZnuS5LLRFjrlDZmJ3BerrmDUcRsVGoDn/fbKKD0tiSSmRnlrFzvEbXQGtMPg==" /></div>
       <button
         class="btn btn-sm btn-with-count js-toggler-target"
-        aria-label="Unstar this repository" title="Unstar ccoenraets/ionic-tutorial"
+        aria-label="Unstar this repository" title="Unstar ccoenraets/OpenFB"
         data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
         <span class="octicon octicon-star"></span>
         Unstar
       </button>
-        <a class="social-count js-social-count" href="/ccoenraets/ionic-tutorial/stargazers">
-          103
+        <a class="social-count js-social-count" href="/ccoenraets/OpenFB/stargazers">
+          318
         </a>
 </form>
-    <form accept-charset="UTF-8" action="/ccoenraets/ionic-tutorial/star" class="js-toggler-form unstarred js-star-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="hm9A35Af2Jhp3CvffsVoqi75EPzslkgLq83khx2/CANodRe1dwag1++EXCyOLrfLJcClgsXIunnimR6JWtcgZQ==" /></div>
+    <form accept-charset="UTF-8" action="/ccoenraets/OpenFB/star" class="js-toggler-form unstarred js-star-button" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Wia33qx7uofa0TpnBgLFu6CUIjj0Aw12Ma5gbt33NzmHpnzStKbBaVz2S/muN1ZQquJukEus1r7UnRpie4QZBQ==" /></div>
       <button
         class="btn btn-sm btn-with-count js-toggler-target"
-        aria-label="Star this repository" title="Star ccoenraets/ionic-tutorial"
+        aria-label="Star this repository" title="Star ccoenraets/OpenFB"
         data-ga-click="Repository, click star button, action:blob#show; text:Star">
         <span class="octicon octicon-star"></span>
         Star
       </button>
-        <a class="social-count js-social-count" href="/ccoenraets/ionic-tutorial/stargazers">
-          103
+        <a class="social-count js-social-count" href="/ccoenraets/OpenFB/stargazers">
+          318
         </a>
 </form>  </div>
 
   </li>
 
         <li>
-          <form accept-charset="UTF-8" action="/ccoenraets/ionic-tutorial/fork" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="qUl+wDc3hZXfeOvd4BeVzTcR4BYk7KvGFStBy4uAt/G/eMXzXdVMdUL1ygal2w4hxOXXxiWAsc4revE9HItmlg==" /></div>
+          <form accept-charset="UTF-8" action="/ccoenraets/OpenFB/fork" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="ZS9Gk5QmWjCtBeK7CYnGhtvfOrNKH6VKRIgutVwwknu+7bLXrkDEP+0zLa1xoliuAJ+aNoKkyZG1rfUPUZGDjw==" /></div>
             <button
                 type="submit"
                 class="btn btn-sm btn-with-count"
                 data-ga-click="Repository, show fork modal, action:blob#show; text:Fork"
-                title="Fork your own copy of ccoenraets/ionic-tutorial to your account"
-                aria-label="Fork your own copy of ccoenraets/ionic-tutorial to your account">
+                title="Fork your own copy of ccoenraets/OpenFB to your account"
+                aria-label="Fork your own copy of ccoenraets/OpenFB to your account">
               <span class="octicon octicon-repo-forked"></span>
               Fork
             </button>
-            <a href="/ccoenraets/ionic-tutorial/network" class="social-count">56</a>
+            <a href="/ccoenraets/OpenFB/network" class="social-count">143</a>
 </form>        </li>
 
 </ul>
@@ -347,7 +347,7 @@
           <span class="mega-octicon octicon-repo"></span>
           <span class="author"><a href="/ccoenraets" class="url fn" itemprop="url" rel="author"><span itemprop="title">ccoenraets</span></a></span><!--
        --><span class="path-divider">/</span><!--
-       --><strong><a href="/ccoenraets/ionic-tutorial" data-pjax="#js-repo-pjax-container">ionic-tutorial</a></strong>
+       --><strong><a href="/ccoenraets/OpenFB" data-pjax="#js-repo-pjax-container">OpenFB</a></strong>
 
           <span class="page-context-loader">
             <img alt="" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
@@ -364,30 +364,30 @@
 <nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
      role="navigation"
      data-pjax="#js-repo-pjax-container"
-     data-issue-count-url="/ccoenraets/ionic-tutorial/issues/counts">
+     data-issue-count-url="/ccoenraets/OpenFB/issues/counts">
   <ul class="sunken-menu-group">
     <li class="tooltipped tooltipped-w" aria-label="Code">
-      <a href="/ccoenraets/ionic-tutorial" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /ccoenraets/ionic-tutorial">
+      <a href="/ccoenraets/OpenFB" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /ccoenraets/OpenFB">
         <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
         <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
 </a>    </li>
 
       <li class="tooltipped tooltipped-w" aria-label="Issues">
-        <a href="/ccoenraets/ionic-tutorial/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /ccoenraets/ionic-tutorial/issues">
+        <a href="/ccoenraets/OpenFB/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g i" data-selected-links="repo_issues repo_labels repo_milestones /ccoenraets/OpenFB/issues">
           <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
           <span class="js-issue-replace-counter"></span>
           <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
 </a>      </li>
 
     <li class="tooltipped tooltipped-w" aria-label="Pull requests">
-      <a href="/ccoenraets/ionic-tutorial/pulls" aria-label="Pull requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /ccoenraets/ionic-tutorial/pulls">
+      <a href="/ccoenraets/OpenFB/pulls" aria-label="Pull requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /ccoenraets/OpenFB/pulls">
           <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull requests</span>
           <span class="js-pull-replace-counter"></span>
           <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
 </a>    </li>
 
       <li class="tooltipped tooltipped-w" aria-label="Wiki">
-        <a href="/ccoenraets/ionic-tutorial/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g w" data-selected-links="repo_wiki /ccoenraets/ionic-tutorial/wiki">
+        <a href="/ccoenraets/OpenFB/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g w" data-selected-links="repo_wiki /ccoenraets/OpenFB/wiki">
           <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
           <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
 </a>      </li>
@@ -396,13 +396,13 @@
   <ul class="sunken-menu-group">
 
     <li class="tooltipped tooltipped-w" aria-label="Pulse">
-      <a href="/ccoenraets/ionic-tutorial/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /ccoenraets/ionic-tutorial/pulse">
+      <a href="/ccoenraets/OpenFB/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /ccoenraets/OpenFB/pulse">
         <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
         <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
 </a>    </li>
 
     <li class="tooltipped tooltipped-w" aria-label="Graphs">
-      <a href="/ccoenraets/ionic-tutorial/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /ccoenraets/ionic-tutorial/graphs">
+      <a href="/ccoenraets/OpenFB/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /ccoenraets/OpenFB/graphs">
         <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
         <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/assets/spinners/octocat-spinner-32-e513294efa576953719e4e2de888dd9cf929b7d62ed8d05f25e731d02452ab6c.gif" width="16" />
 </a>    </li>
@@ -418,7 +418,7 @@
   <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
   <div class="input-group js-zeroclipboard-container">
     <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
-           value="https://github.com/ccoenraets/ionic-tutorial.git" readonly="readonly">
+           value="https://github.com/ccoenraets/OpenFB.git" readonly="readonly">
     <span class="input-group-button">
       <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
     </span>
@@ -431,7 +431,7 @@
   <h3><span class="text-emphasized">SSH</span> clone URL</h3>
   <div class="input-group js-zeroclipboard-container">
     <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
-           value="git@github.com:ccoenraets/ionic-tutorial.git" readonly="readonly">
+           value="git@github.com:ccoenraets/OpenFB.git" readonly="readonly">
     <span class="input-group-button">
       <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
     </span>
@@ -444,7 +444,7 @@
   <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
   <div class="input-group js-zeroclipboard-container">
     <input type="text" class="input-mini input-monospace js-url-field js-zeroclipboard-target"
-           value="https://github.com/ccoenraets/ionic-tutorial" readonly="readonly">
+           value="https://github.com/ccoenraets/OpenFB" readonly="readonly">
     <span class="input-group-button">
       <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
     </span>
@@ -454,23 +454,23 @@
 
 
 <div class="clone-options">You can clone with
-  <form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="u5CVWE9xzvGLjkE9c4g4kgCx0Wn3hcMZao/Oqs3362mA9o3IL+VHHMR3lxCWhod2BeogjbGNolKhl8qhSbDdcA==" /></div><button class="btn-link js-clone-selector" data-protocol="http" type="submit">HTTPS</button></form>, <form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="+j/gCwbqzB0lA6UiUb1WK3qBPbR1Bu4OtEycGp7YWfO2N/4k05nSCzoxQfDMPEsGYwNKQyhvd79dDlpM/ENrjA==" /></div><button class="btn-link js-clone-selector" data-protocol="ssh" type="submit">SSH</button></form>, or <form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="W0Du0r5/mKjBBuOpEYs4WxeO8+QILSP+AaDK3FkIS9009KS9DYtyK5Yb8BaN/jL/8qmXGeMx+R+0nObhit3Cyg==" /></div><button class="btn-link js-clone-selector" data-protocol="subversion" type="submit">Subversion</button></form>.
+  <form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="uwdlBZFU/EJPnBouElraPUVIo9Z8HDSNa5hfDPEr+qBO64pqkhx/iiqQPeuH2DGIF1lP8wiJXRrfWn+bgdkyAg==" /></div><button class="btn-link js-clone-selector" data-protocol="http" type="submit">HTTPS</button></form>, <form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="RkO6YZW40z79lNPkw16kCXAtB7roBZGJ2PVkuZNBj3mmKEn2Ylny1IqJQrI8ETZrNlGVQbfMKlC2URnq1vL6/g==" /></div><button class="btn-link js-clone-selector" data-protocol="ssh" type="submit">SSH</button></form>, or <form accept-charset="UTF-8" action="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone" class="inline-form js-clone-selector-form is-enabled" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="Xp+iftKyHgcuCBrtilIk2cqqRJ1d+ksK0UMEwwLrBxXzG4NvdxHMNsxUmY73o+uPnhNGy5sxao1TjnNZ17z+FQ==" /></div><button class="btn-link js-clone-selector" data-protocol="subversion" type="submit">Subversion</button></form>.
   <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
     <span class="octicon octicon-question"></span>
   </a>
 </div>
 
 
-  <a href="https://windows.github.com" class="btn btn-sm sidebar-button" title="Save ccoenraets/ionic-tutorial to your computer and use it in GitHub Desktop." aria-label="Save ccoenraets/ionic-tutorial to your computer and use it in GitHub Desktop.">
+  <a href="https://windows.github.com" class="btn btn-sm sidebar-button" title="Save ccoenraets/OpenFB to your computer and use it in GitHub Desktop." aria-label="Save ccoenraets/OpenFB to your computer and use it in GitHub Desktop.">
     <span class="octicon octicon-device-desktop"></span>
     Clone in Desktop
   </a>
 
 
-                <a href="/ccoenraets/ionic-tutorial/archive/master.zip"
+                <a href="/ccoenraets/OpenFB/archive/master.zip"
                    class="btn btn-sm sidebar-button"
-                   aria-label="Download the contents of ccoenraets/ionic-tutorial as a zip file"
-                   title="Download the contents of ccoenraets/ionic-tutorial as a zip file"
+                   aria-label="Download the contents of ccoenraets/OpenFB as a zip file"
+                   title="Download the contents of ccoenraets/OpenFB as a zip file"
                    rel="nofollow">
                   <span class="octicon octicon-cloud-download"></span>
                   Download ZIP
@@ -482,9 +482,9 @@
 
           
 
-<a href="/ccoenraets/ionic-tutorial/blob/d5e3a9bbb55c377e7540720eeef411fe67b9c8f1/resources/ngopenfb.js" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+<a href="/ccoenraets/OpenFB/blob/1fccc322b0d93508c97beaabe93327560d182c13/ngopenfb.js" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
-<!-- blob contrib key: blob_contributors:v21:92a2fddc95bf6cc8cb9f53f91eec42f8 -->
+<!-- blob contrib key: blob_contributors:v21:a296e48db09d81390b5a33166a5bfc4e -->
 
 <div class="file-navigation js-zeroclipboard-container">
   
@@ -527,18 +527,8 @@
         <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
 
 
-            <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/ccoenraets/ionic-tutorial/blob/gh-pages/resources/ngopenfb.js"
-               data-name="gh-pages"
-               data-skip-pjax="true"
-               rel="nofollow">
-              <span class="select-menu-item-icon octicon octicon-check"></span>
-              <span class="select-menu-item-text css-truncate-target" title="gh-pages">
-                gh-pages
-              </span>
-            </a>
             <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/ccoenraets/ionic-tutorial/blob/master/resources/ngopenfb.js"
+               href="/ccoenraets/OpenFB/blob/master/ngopenfb.js"
                data-name="master"
                data-skip-pjax="true"
                rel="nofollow">
@@ -556,6 +546,15 @@
         <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
 
 
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/ccoenraets/OpenFB/tree/0.5.0/ngopenfb.js"
+                 data-name="0.5.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="0.5.0">0.5.0</a>
+            </div>
         </div>
 
         <div class="select-menu-no-results">Nothing to show</div>
@@ -566,7 +565,7 @@
 </div>
 
   <div class="btn-group right">
-    <a href="/ccoenraets/ionic-tutorial/find/master"
+    <a href="/ccoenraets/OpenFB/find/master"
           class="js-show-file-finder btn btn-sm empty-icon tooltipped tooltipped-s"
           data-pjax
           data-hotkey="t"
@@ -577,7 +576,7 @@
   </div>
 
   <div class="breadcrumb js-zeroclipboard-target">
-    <span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/ccoenraets/ionic-tutorial" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">ionic-tutorial</span></a></span></span><span class="separator">/</span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/ccoenraets/ionic-tutorial/tree/master/resources" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">resources</span></a></span><span class="separator">/</span><strong class="final-path">ngopenfb.js</strong>
+    <span class="repo-root js-repo-root"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/ccoenraets/OpenFB" class="" data-branch="master" data-pjax="true" itemscope="url"><span itemprop="title">OpenFB</span></a></span></span><span class="separator">/</span><strong class="final-path">ngopenfb.js</strong>
   </div>
 </div>
 
@@ -586,9 +585,9 @@
     <div class="file-history-tease-header">
         <img alt="@ccoenraets" class="avatar" data-user="384156" height="24" src="https://avatars1.githubusercontent.com/u/384156?v=3&amp;s=48" width="24" />
         <span class="author"><a href="/ccoenraets" rel="author">ccoenraets</a></span>
-        <time datetime="2015-05-26T15:53:15Z" is="relative-time">May 26, 2015</time>
+        <time datetime="2015-05-26T17:33:25Z" is="relative-time">May 26, 2015</time>
         <div class="commit-title">
-            <a href="/ccoenraets/ionic-tutorial/commit/3ca565972ada3749f7b1b3493d405b12c1d589f1" class="message" data-pjax="true" title="Updated for Ionic 1.0, latest version of Express and OpenFB 0.5">Updated for Ionic 1.0, latest version of Express and OpenFB 0.5</a>
+            <a href="/ccoenraets/OpenFB/commit/3b6529b3d824396b4d3d1ee377643e6db5ee54d8" class="message" data-pjax="true" title="version 0.5">version 0.5</a>
         </div>
     </div>
 
@@ -617,9 +616,9 @@
     <div class="file-actions">
 
       <div class="btn-group">
-        <a href="/ccoenraets/ionic-tutorial/raw/master/resources/ngopenfb.js" class="btn btn-sm " id="raw-url">Raw</a>
-          <a href="/ccoenraets/ionic-tutorial/blame/master/resources/ngopenfb.js" class="btn btn-sm js-update-url-with-hash">Blame</a>
-        <a href="/ccoenraets/ionic-tutorial/commits/master/resources/ngopenfb.js" class="btn btn-sm " rel="nofollow">History</a>
+        <a href="/ccoenraets/OpenFB/raw/master/ngopenfb.js" class="btn btn-sm " id="raw-url">Raw</a>
+          <a href="/ccoenraets/OpenFB/blame/master/ngopenfb.js" class="btn btn-sm js-update-url-with-hash">Blame</a>
+        <a href="/ccoenraets/OpenFB/commits/master/ngopenfb.js" class="btn btn-sm " rel="nofollow">History</a>
       </div>
 
         <a class="octicon-btn tooltipped tooltipped-nw"
@@ -629,12 +628,12 @@
             <span class="octicon octicon-device-desktop"></span>
         </a>
 
-            <form accept-charset="UTF-8" action="/ccoenraets/ionic-tutorial/edit/master/resources/ngopenfb.js" class="inline-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XLBg4prooxeqO5aWSxVKOEX3hnsI2LqTl6uoSwNy0L+GdGC2sHwQMnTuJKiDZ+SJSX/eZX7wD9hyO08WnKYzxg==" /></div>
+            <form accept-charset="UTF-8" action="/ccoenraets/OpenFB/edit/master/ngopenfb.js" class="inline-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="19fVydUIFPDZxLvmKLAdrQl3h7T5RCeOo+wA7Llj3XJdwYl6iZRlebDHYKLJuIHD8PVKzP2DVhlGm9PMazKxag==" /></div>
               <button class="octicon-btn tooltipped tooltipped-n" type="submit" aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with>
                 <span class="octicon octicon-pencil"></span>
               </button>
 </form>
-          <form accept-charset="UTF-8" action="/ccoenraets/ionic-tutorial/delete/master/resources/ngopenfb.js" class="inline-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="OLAo7HweLAK9aEwrCgi/GYU5ilvsAnqLC9efaLspIZj5q7N7y6ERoXiYZ1xjhNlc819cLHjBCidfmWl3ZqzV4A==" /></div>
+          <form accept-charset="UTF-8" action="/ccoenraets/OpenFB/delete/master/ngopenfb.js" class="inline-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="YZvya8PPKJzQdpFR9X2oMSEClO6ooVflvKUK+c91lTyfa+kZK2KHGy934JxYTbaeEFcxcKuHVlE9WmWOV9jVng==" /></div>
             <button class="octicon-btn octicon-btn-danger tooltipped tooltipped-n" type="submit" aria-label="Fork this project and delete this file" data-disable-with>
               <span class="octicon octicon-trashcan"></span>
             </button>
@@ -1022,7 +1021,7 @@
       <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
 </a>
     <ul class="site-footer-links">
-      <li>&copy; 2015 <span title="0.05803s from github-fe135-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+      <li>&copy; 2015 <span title="0.05029s from github-fe121-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
         <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
         <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
         <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
