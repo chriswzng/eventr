@@ -1,6 +1,6 @@
 
     
-   <ion-content ng-controller='LoginController' has-header="true" padding="true" style="background: url(../img/login.jpg) center; background-size: cover;">
+   <ion-content ng-controller='LoginController' has-header="true" padding="true" style="background: url(img/login.jpg) center; background-size: cover;">
     <div class="row row-center">
       <div class="col col-center">
        <div class="list">
@@ -17,11 +17,17 @@
     </div>
     <div class="row">
       <div class="col">
-        <button class="button button-block button-positive" ng-click="login()">
-      <img src="../img/facebook-1024.png"  style="vertical-align:middle" width="56" height="56"/>
-      <span style="vertical-align:middle">
-Login with Facebook
-  </span>
+        <button class="button button-block button-balanced" ng-click="login()">
+          <span style="vertical-align:middle">
+            Login
+          </span>
+        </button>
+
+         <button class="button button-block button-positive" ng-click="fbLogin()">
+          <img src="img/facebook-1024.png"  style="vertical-align:middle" width="56" height="56"/>
+          <span style="vertical-align:middle">
+            Login with Facebook
+          </span>
         </button>
       </div>
     </div>
