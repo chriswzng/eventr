@@ -12,13 +12,13 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td style="padding-top:20px;">
                 Password (or <a href="#" style="color:#26a9e0;">did you forget?</a>):<br />
                 <asp:TextBox ID="txtLogin" runat="server" TextMode="Password"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td>
+            <td style="padding-top:20px;">
                 <asp:Button ID="btnLogin" runat="server" Text="Log in" OnClick="btnLogin_Click" />
             </td>
         </tr>
