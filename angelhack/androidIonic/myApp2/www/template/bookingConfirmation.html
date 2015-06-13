@@ -1,0 +1,47 @@
+<div ng-controller="BookingConfirmationController">
+<div>
+    <div class="bar bar-header bar-dark" style="background-color:#000000;">
+        <img src="img/Eventr-logo-transparent-white-text.png" style="max-height:80%;" />
+    </div>
+
+    <ion-content class="has-header" style="text-align:center;">
+        <div class="stepsInstruction">Please kindly confirm your booking details.</div>
+    </ion-content>
+
+    <ion-content class="has-header" style="padding-top: 40px; padding-left: 20px; font-size: 18px; font-weight: bold;">
+        <div class="row" style="padding-top: 20px">
+            <div style="padding-top: 0px;">
+                <img src = "img/location-icon.png" />
+                <span style="padding-left: 5px;">Location</span>
+            </div>
+        </div>
+
+
+         <div class="row" style="padding-top: 20px">
+            <div style="padding-top: 0px;">
+                <img src = "img/time-and-date-icon.png" />
+                <span style="padding-left: 5px;">Event time and date</span>
+            </div>
+        </div>
+
+        <div class="row" style="padding-top: 20px">
+            <div style="padding-top: 0px;">
+                <img src = "img/number-of-pax-icon.png" />
+                <span style="padding-left: 5px;">Number of pax</span>
+            </div>
+        </div>
+
+        <div class="row" style="padding-top: 20px">
+            <div style="padding-top: 0px;">
+                <img src = "img/total-cost-icon.png" />
+                <span style="padding-left: 5px;">Cost to rent</span>
+            </div>
+        </div>
+
+    </ion-content>
+
+     <div class="bar bar-footer bar-dark" style="background-color:#000000;">
+         <button class="button button-positive" style="margin-left:30px; width: 80%; height: 10%; background-color:#000000; "  ng-click="payBooking()">Confirm and Pay</button> 
+    </div>
+</div>
+</div>

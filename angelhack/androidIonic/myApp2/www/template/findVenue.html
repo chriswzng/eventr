@@ -17,6 +17,7 @@
     </ion-content>
 
     <ion-content class="has-header" ng-show="currentStep() == 1" style="background-image: url('img/numofpax.png'); text-align:center;">
+    <div>
         <div class="stepsInstruction">{{headerText[currentStep()]}}</div>
 
         <div class="row">
@@ -97,10 +98,10 @@
             </ionic-timepicker>
         </div>
 
-        <div class="bar bar-footer bar-dark" style="background-color:#000000; top:100%;">
-
+        <div class="bar bar-footer bar-dark" style="background-color:#000000; top:101%; height: 70px;">
             <button class="button button-dark" style="width:80%; margin-left:auto; margin-right:auto; background-color:#000;"  ng-click="selectPax(paxRange)">Next</button>
         </div>
+    </div>
     </ion-content>
 
     <ion-content class="has-header" ng-show="currentStep() == 2">
