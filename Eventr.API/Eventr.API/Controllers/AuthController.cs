@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Eventr.API.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -12,16 +13,10 @@ namespace Eventr.API.Controllers
     {
         [Route("register")]
         [HttpPost]
-        public bool Register()
+        public bool Register([FromBody] object obj)
         {
-            return true;
-        }
-
-        [Route("login")]
-        [HttpPost]
-        public bool Login()
-        {
-            return true;
+            UserService userService = new UserService();
+            return userService.AddUser(obj);
         }
     }
 }

@@ -9,7 +9,10 @@ using System.Web.Http;
 
 namespace Eventr.API.Controllers
 {
+<<<<<<< HEAD
     //[HttpAuthorizeAttribute]
+=======
+>>>>>>> 9db1cfb48fb354ce14a8b98b33a2ad4433e7d29a
     [RoutePrefix("venue")]
     public class VenueController : ApiController
     {
