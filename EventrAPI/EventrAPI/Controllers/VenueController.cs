@@ -12,6 +12,7 @@ namespace EventrAPI.Controllers
     public class VenueController : ApiController
     {
         [HttpGet]
+        [Route("get")]
         public IEnumerable<object> GetVenues()
         {
             VenueService venueService = new VenueService();

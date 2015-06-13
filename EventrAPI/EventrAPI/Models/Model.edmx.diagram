@@ -4,7 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="675c6630eccc4b1c867e0fb16c3953dc" Name="Diagram1" />
+      <Diagram DiagramId="f083440cfb4f40759a571b7c6cb899b4" Name="Diagram1" >
+        <EntityTypeShape EntityType="EventrModel.AdditionalServiceEnt" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EventrModel.BookingEnt" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EventrModel.BookingAdditionalServiceEnt" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EventrModel.EventCategoryEnt" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="EventrModel.ServiceTypeEnt" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="EventrModel.ServiceTypeEventCategoryEnt" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EventrModel.UserEnt" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EventrModel.UserVenueEnt" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EventrModel.VenueEnt" Width="1.5" PointX="4.75" PointY="6.75" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

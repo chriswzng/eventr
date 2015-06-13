@@ -13,10 +13,10 @@ namespace EventrAPI.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ModelContainer : DbContext
+    public partial class EventrEntities : DbContext
     {
-        public ModelContainer()
-            : base("name=ModelContainer")
+        public EventrEntities()
+            : base("name=EventrEntities")
         {
         }
     
@@ -25,5 +25,14 @@ namespace EventrAPI.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<AdditionalServiceEnt> AdditionalServiceEnts { get; set; }
+        public DbSet<BookingEnt> BookingEnts { get; set; }
+        public DbSet<BookingAdditionalServiceEnt> BookingAdditionalServiceEnts { get; set; }
+        public DbSet<EventCategoryEnt> EventCategoryEnts { get; set; }
+        public DbSet<ServiceTypeEnt> ServiceTypeEnts { get; set; }
+        public DbSet<ServiceTypeEventCategoryEnt> ServiceTypeEventCategoryEnts { get; set; }
+        public DbSet<UserEnt> UserEnts { get; set; }
+        public DbSet<UserVenueEnt> UserVenueEnts { get; set; }
+        public DbSet<VenueEnt> VenueEnts { get; set; }
     }
 }

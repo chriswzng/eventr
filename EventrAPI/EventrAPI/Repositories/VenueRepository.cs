@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventrAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,17 +12,18 @@ namespace EventrAPI.Repositories
         {
         }
 
-        internal IEnumerable<object> GetVenues()
+        internal List<VenueEnt> GetVenues()
         {
-            throw new NotImplementedException();
+            return DataContext.VenueEnts.ToList();
         }
 
-        internal bool AddVenue()
+        internal bool AddVenue(VenueEnt venueEnt)
         {
+            DataContext.VenueEnts.Add(venueEnt);
             return Commit();
         }
 
-        internal bool UpdateVenue()
+        internal bool UpdateVenue(VenueEnt venueEnt)
         {
             return Commit();
         }

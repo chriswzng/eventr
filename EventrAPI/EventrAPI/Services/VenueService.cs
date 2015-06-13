@@ -1,4 +1,5 @@
-﻿using EventrAPI.Repositories;
+﻿using EventrAPI.Models;
+using EventrAPI.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,11 @@ namespace EventrAPI.Services
         internal IEnumerable<object> GetVenues()
         {
             VenueRepository venueRepository = new VenueRepository();
-            var venues = venueRepository.GetVenues();
-            return ConvertToContract(venues);
+            List<VenueEnt> venueEnts = venueRepository.GetVenues();
+            return ConvertToContract(venueEnts);
         }
 
-        private IEnumerable<object> ConvertToContract(IEnumerable<object> venues)
+        private IEnumerable<object> ConvertToContract(IEnumerable<VenueEnt> venues)
         {
             throw new NotImplementedException();
         }

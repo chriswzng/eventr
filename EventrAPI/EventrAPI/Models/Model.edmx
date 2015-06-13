@@ -4,44 +4,345 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="ModelStoreContainer" />
+    <Schema Namespace="EventrModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AdditionalService">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ServiceTypeID" Type="uniqueidentifier" />
+          <Property Name="startDate" Type="datetime" />
+          <Property Name="endDate" Type="datetime" />
+          <Property Name="startTime" Type="time" Precision="7" />
+          <Property Name="endTime" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="Booking">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="VenueId" Type="uniqueidentifier" />
+          <Property Name="EventCategoryId" Type="uniqueidentifier" />
+          <Property Name="BookingTimeFrom" Type="datetime" />
+          <Property Name="BookingTimeTo" Type="datetime" />
+          <Property Name="Pax" Type="int" />
+          <Property Name="EventBriteID" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="BookingAdditionalService">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BookingID" Type="uniqueidentifier" />
+          <Property Name="AdditionalServiceID" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="EventCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Media">
+          <Property Name="Id" Type="uniqueidentifier" />
+          <Property Name="VenueId" Type="uniqueidentifier" />
+          <Property Name="AdditionalServiceId" Type="uniqueidentifier" />
+          <Property Name="mediaFileName" Type="nvarchar" MaxLength="300" />
+          <Property Name="filePath" Type="nvarchar(max)" />
+        </EntityType>-->
+        <EntityType Name="ServiceType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="ServiceTypeEventCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ServiceTypeId" Type="uniqueidentifier" />
+          <Property Name="EventCategoryId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="200" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="200" />
+          <Property Name="email" Type="nvarchar" MaxLength="500" />
+          <Property Name="token" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserVenue">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" />
+          <Property Name="VenueId" Type="uniqueidentifier" />
+        </EntityType>
+        <EntityType Name="Venue">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Location" Type="nvarchar" MaxLength="300" />
+          <Property Name="MinPax" Type="int" />
+          <Property Name="MaxPax" Type="int" />
+          <Property Name="Cost" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="startDate" Type="datetime" />
+          <Property Name="endDate" Type="datetime" />
+          <Property Name="startTime" Type="time" Precision="7" />
+          <Property Name="endTime" Type="time" Precision="7" />
+          <Property Name="IsFullDay" Type="bit" />
+          <Property Name="IsSupportWeekDay" Type="bit" />
+          <Property Name="IsSupportWeekEnd" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="EventrModelStoreContainer">
+          <EntitySet Name="AdditionalService" EntityType="Self.AdditionalService" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Booking" EntityType="Self.Booking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BookingAdditionalService" EntityType="Self.BookingAdditionalService" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventCategory" EntityType="Self.EventCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceType" EntityType="Self.ServiceType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceTypeEventCategory" EntityType="Self.ServiceTypeEventCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserVenue" EntityType="Self.UserVenue" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Venue" EntityType="Self.Venue" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
-        <EntityContainer Name="ModelContainer" annotation:LazyLoadingEnabled="true">
+      <Schema Namespace="EventrModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EventrEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="AdditionalServiceEnts" EntityType="EventrModel.AdditionalServiceEnt" />
+          <EntitySet Name="BookingEnts" EntityType="EventrModel.BookingEnt" />
+          <EntitySet Name="BookingAdditionalServiceEnts" EntityType="EventrModel.BookingAdditionalServiceEnt" />
+          <EntitySet Name="EventCategoryEnts" EntityType="EventrModel.EventCategoryEnt" />
+          <EntitySet Name="ServiceTypeEnts" EntityType="EventrModel.ServiceTypeEnt" />
+          <EntitySet Name="ServiceTypeEventCategoryEnts" EntityType="EventrModel.ServiceTypeEventCategoryEnt" />
+          <EntitySet Name="UserEnts" EntityType="EventrModel.UserEnt" />
+          <EntitySet Name="UserVenueEnts" EntityType="EventrModel.UserVenueEnt" />
+          <EntitySet Name="VenueEnts" EntityType="EventrModel.VenueEnt" />
         </EntityContainer>
+        <EntityType Name="AdditionalServiceEnt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ServiceTypeID" Type="Guid" />
+          <Property Name="startDate" Type="DateTime" Precision="3" />
+          <Property Name="endDate" Type="DateTime" Precision="3" />
+          <Property Name="startTime" Type="Time" Precision="7" />
+          <Property Name="endTime" Type="Time" Precision="7" />
+        </EntityType>
+        <EntityType Name="BookingEnt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="VenueId" Type="Guid" />
+          <Property Name="EventCategoryId" Type="Guid" />
+          <Property Name="BookingTimeFrom" Type="DateTime" Precision="3" />
+          <Property Name="BookingTimeTo" Type="DateTime" Precision="3" />
+          <Property Name="Pax" Type="Int32" />
+          <Property Name="EventBriteID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="BookingAdditionalServiceEnt">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Guid" Nullable="false" />
+          <Property Name="BookingID" Type="Guid" />
+          <Property Name="AdditionalServiceID" Type="Guid" />
+        </EntityType>
+        <EntityType Name="EventCategoryEnt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ServiceTypeEnt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ServiceTypeEventCategoryEnt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="ServiceTypeId" Type="Guid" />
+          <Property Name="EventCategoryId" Type="Guid" />
+        </EntityType>
+        <EntityType Name="UserEnt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="firstName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="token" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UserVenueEnt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="UserId" Type="Guid" />
+          <Property Name="VenueId" Type="Guid" />
+        </EntityType>
+        <EntityType Name="VenueEnt">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Location" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="MinPax" Type="Int32" />
+          <Property Name="MaxPax" Type="Int32" />
+          <Property Name="Cost" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="startDate" Type="DateTime" Precision="3" />
+          <Property Name="endDate" Type="DateTime" Precision="3" />
+          <Property Name="startTime" Type="Time" Precision="7" />
+          <Property Name="endTime" Type="Time" Precision="7" />
+          <Property Name="IsFullDay" Type="Boolean" />
+          <Property Name="IsSupportWeekDay" Type="Boolean" />
+          <Property Name="IsSupportWeekEnd" Type="Boolean" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="Model" />
-        <Alias Key="Target" Value="Model.Store" />
-        <EntityContainerMapping CdmEntityContainer="ModelContainer" StorageEntityContainer="ModelStoreContainer">
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EventrModelStoreContainer" CdmEntityContainer="EventrEntities" >
+          <EntitySetMapping Name="AdditionalServiceEnts">
+            <EntityTypeMapping TypeName="EventrModel.AdditionalServiceEnt">
+              <MappingFragment StoreEntitySet="AdditionalService">
+                <ScalarProperty Name="endTime" ColumnName="endTime" />
+                <ScalarProperty Name="startTime" ColumnName="startTime" />
+                <ScalarProperty Name="endDate" ColumnName="endDate" />
+                <ScalarProperty Name="startDate" ColumnName="startDate" />
+                <ScalarProperty Name="ServiceTypeID" ColumnName="ServiceTypeID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingEnts">
+            <EntityTypeMapping TypeName="EventrModel.BookingEnt">
+              <MappingFragment StoreEntitySet="Booking">
+                <ScalarProperty Name="EventBriteID" ColumnName="EventBriteID" />
+                <ScalarProperty Name="Pax" ColumnName="Pax" />
+                <ScalarProperty Name="BookingTimeTo" ColumnName="BookingTimeTo" />
+                <ScalarProperty Name="BookingTimeFrom" ColumnName="BookingTimeFrom" />
+                <ScalarProperty Name="EventCategoryId" ColumnName="EventCategoryId" />
+                <ScalarProperty Name="VenueId" ColumnName="VenueId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BookingAdditionalServiceEnts">
+            <EntityTypeMapping TypeName="EventrModel.BookingAdditionalServiceEnt">
+              <MappingFragment StoreEntitySet="BookingAdditionalService">
+                <ScalarProperty Name="AdditionalServiceID" ColumnName="AdditionalServiceID" />
+                <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventCategoryEnts">
+            <EntityTypeMapping TypeName="EventrModel.EventCategoryEnt">
+              <MappingFragment StoreEntitySet="EventCategory">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceTypeEnts">
+            <EntityTypeMapping TypeName="EventrModel.ServiceTypeEnt">
+              <MappingFragment StoreEntitySet="ServiceType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceTypeEventCategoryEnts">
+            <EntityTypeMapping TypeName="EventrModel.ServiceTypeEventCategoryEnt">
+              <MappingFragment StoreEntitySet="ServiceTypeEventCategory">
+                <ScalarProperty Name="EventCategoryId" ColumnName="EventCategoryId" />
+                <ScalarProperty Name="ServiceTypeId" ColumnName="ServiceTypeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserEnts">
+            <EntityTypeMapping TypeName="EventrModel.UserEnt">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="token" ColumnName="token" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserVenueEnts">
+            <EntityTypeMapping TypeName="EventrModel.UserVenueEnt">
+              <MappingFragment StoreEntitySet="UserVenue">
+                <ScalarProperty Name="VenueId" ColumnName="VenueId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VenueEnts">
+            <EntityTypeMapping TypeName="EventrModel.VenueEnt">
+              <MappingFragment StoreEntitySet="Venue">
+                <ScalarProperty Name="IsSupportWeekEnd" ColumnName="IsSupportWeekEnd" />
+                <ScalarProperty Name="IsSupportWeekDay" ColumnName="IsSupportWeekDay" />
+                <ScalarProperty Name="IsFullDay" ColumnName="IsFullDay" />
+                <ScalarProperty Name="endTime" ColumnName="endTime" />
+                <ScalarProperty Name="startTime" ColumnName="startTime" />
+                <ScalarProperty Name="endDate" ColumnName="endDate" />
+                <ScalarProperty Name="startDate" ColumnName="startDate" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="MaxPax" ColumnName="MaxPax" />
+                <ScalarProperty Name="MinPax" ColumnName="MinPax" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
-  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
-    <edmx:Connection>
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
       </DesignerInfoPropertySet>
-    </edmx:Connection>
-    <edmx:Options>
+    </Connection>
+    <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
-        <DesignerProperty Name="UseLegacyProvider" Value="True" />
       </DesignerInfoPropertySet>
-    </edmx:Options>
+    </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <edmx:Diagrams>
-    </edmx:Diagrams>
-  </edmx:Designer>
+    <Diagrams></Diagrams>
+  </Designer>
 </edmx:Edmx>
