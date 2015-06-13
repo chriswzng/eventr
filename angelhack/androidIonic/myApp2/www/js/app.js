@@ -40,6 +40,10 @@ angular.module('starter', ['ionic','facebook'])
     url: '/venueFinder/:categoryId/:paxRange',
     templateUrl: 'template/venuefinder.html'
   })
+  .state('hostVenue',{
+    url: '/hostVenue',
+    templateUrl: 'template/hostVenue.html'
+  })
 })
 .config(function(FacebookProvider) {
      // Set your appId through the setAppId method or

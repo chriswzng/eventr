@@ -6,39 +6,39 @@ angular.module('starter')
 	'Step 2: How many are going?',
 	'Step 3: Choose a venue'
 	]
-$scope.paxRange = "";
+// $scope.paxRange = "";
 
-	$scope.currentStep = function(){
+// 	$scope.currentStep = function(){
 
-		if($state.params.paxRange != undefined && $state.params.paxRange != "" ){
-			return 2;
-		}
-		else if($state.params.categoryId != undefined &&$state.params.categoryId != ""){
-			return 1;
-		}
-		else
-			return 0;
+// 		if($state.params.paxRange != undefined && $state.params.paxRange != "" ){
+// 			return 2;
+// 		}
+// 		else if($state.params.categoryId != undefined &&$state.params.categoryId != ""){
+// 			return 1;
+// 		}
+// 		else
+// 			return 0;
 	
-	}
-	$scope.slideHasChanged = function(index){
+// 	}
+// 	$scope.slideHasChanged = function(index){
 
-		$scope.sliderIndex = index;
-	}
-	$scope.selectCategory = function(category){
-		$state.go('venueFinder.pax',{categoryId: category.id});
-	}
-	$scope.selectPax = function(paxRange){
+// 		$scope.sliderIndex = index;
+// 	}
+// 	$scope.selectCategory = function(category){
+// 		$state.go('venueFinder.pax',{categoryId: category.id});
+// 	}
+// 	$scope.selectPax = function(paxRange){
 		
-		$state.go('venueFinder.pickVenue',{categoryId: $state.params.categoryId, paxRange: paxRange});
-	}
+// 		$state.go('venueFinder.pickVenue',{categoryId: $state.params.categoryId, paxRange: paxRange});
+// 	}
 
 
- $http.get('../json/categories.json').success(function(data){
-       $scope.categories = data;
-    });
+//  $http.get('json/categories.json').success(function(data){
+//        $scope.categories = data;
+//     });
 
- $http.get('../json/venues.json').success(function(data){
-       $scope.venues = data;
-    });
+//  $http.get('json/venues.json').success(function(data){
+//        $scope.venues = data;
+//     });
 
 });
