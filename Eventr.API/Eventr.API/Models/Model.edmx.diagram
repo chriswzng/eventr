@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="260417186e3e43868ce9c90832ad4113" Name="Diagram1">
+        <EntityTypeShape EntityType="EventrModel.AdditionalServiceEnt" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventrModel.BookingEnt" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventrModel.BookingAdditionalServiceEnt" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventrModel.EventCategoryEnt" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventrModel.MediumEnt" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventrModel.ServiceTypeEnt" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventrModel.ServiceTypeEventCategoryEnt" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventrModel.UserEnt" Width="1.5" PointX="3.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventrModel.UserVenueEnt" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EventrModel.VenueEnt" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="EventrModel.FK__BookingAd__Addit__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__Media__Additiona__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__Booking__EventBr__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__Booking__EventCa__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__Booking__VenueId__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__BookingAd__Booki__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__ServiceTy__Event__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__Media__VenueId__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__ServiceTy__Event__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__UserVenue__UserI__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="EventrModel.FK__UserVenue__Venue__2B3F6F97" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
