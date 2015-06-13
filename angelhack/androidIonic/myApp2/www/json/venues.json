@@ -9,8 +9,10 @@
       "rating":"4.4",
       "phone":"03-53319446",
       "latitude": 3.1540300323989,
-      "longitude": 101.70637882555
-
+      "longitude": 101.70637882555,
+      "city": "Jalan Bukit Bintang",
+      "state": "Kuala Lumpur",
+      "cost": "$1000"
    },
    {  
       "id":"2",
@@ -22,7 +24,10 @@
       "rating":"4.4",
       "phone":"03-53319446",
       "latitude": 3.1540300323989,
-      "longitude": 101.70637882555
+      "longitude": 101.70637882555,
+      "city": "Jalan Bukit Bintang",
+      "state": "Kuala Lumpur"
+      "cost": "$1000"
    },
    {  
       "id":"3",
@@ -34,6 +39,9 @@
       "rating":"4.5",
       "phone":"03-24193719",
       "latitude": 3.1554144067637,
-      "longitude": 101.70561215789
+      "longitude": 101.70561215789,
+      "city": "Sultan Ismail",
+      "state": "Kuala Lumpur"
+      "cost": "$1000"
    }
 ]
