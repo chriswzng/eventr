@@ -7,7 +7,7 @@
             <div style="position:absolute;right:0px;top:90px">
                
                 <button class="button button-large button-clear2 flat waves-effect waves-button waves-light icon ion-images pull-right text-white"></button>
-                <a class="button button-large button-clear2 flat waves-effect waves-button waves-light icon ion-map pull-right text-white" ng-href="geo:{{selectedVenue.latitude}},{{selectedVenue.longitude}}"></a>
+                <a class="button button-large button-clear2 flat waves-effect waves-button waves-light icon ion-map pull-right text-white" ng-href="geo:{{selectedVenue.latitude}},{{selectedVenue.longitude}}?q={{selectedVenue.name}}"></a>
             </div>
            
         </div>
@@ -55,6 +55,7 @@
        <span class="balanced" style="font-size:18pt; color:">{{selectedVenue.cost}}</span><br/>per hour
    </div>
  </div>
+ <button class="button button-positive" style="margin-left:30px; top: 75%; width: 80%; height: 10%;"  ng-click="completeBooking()">Book Now</button>
 </div>
 </ion-content>
 
