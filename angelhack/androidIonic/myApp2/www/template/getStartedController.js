@@ -7,7 +7,7 @@ $scope.contact = {
   }
 
 $scope.rentVenue = function(){
-  $state.go('venueFinder');
+  $state.go('findVenue');
 }
 
 $scope.hostVenue = function(){

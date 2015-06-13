@@ -1,34 +1,34 @@
 [  
    {  "id":1,
       "name":"Birthday Party",
-      "imageUrl":"../img/categories/bday.png"
+      "imageUrl":"img/categories/bday.png"
    },
    {  "id":2,
       "name":"Wedding",
-      "imageUrl":"../img/categories/wedding.png"
+      "imageUrl":"img/categories/wedding.png"
    },
    {  "id":3,
       "name":"Meeting",
-      "imageUrl":"../img/categories/meeting.png"
+      "imageUrl":"img/categories/meeting.png"
    },
    {  "id":4,
       "name":"Party",
-      "imageUrl":"../img/categories/party.png"
+      "imageUrl":"img/categories/party.png"
    },
    {  "id":5,
       "name":"Hackathon",
-      "imageUrl":"../img/categories/hackathon.png"
+      "imageUrl":"img/categories/hackathon.png"
    },
    {  "id":6,
       "name":"Team Building",
-      "imageUrl":"../img/categories/teamBuilding.png"
+      "imageUrl":"img/categories/teamBuilding.png"
    },
    {  "id":7,
       "name":"Seminar",
-      "imageUrl":"../img/categories/seminar.png"
+      "imageUrl":"img/categories/seminar.png"
    },
    {  "id":8,
       "name":"Product Launch",
-      "imageUrl":"../img/categories/productLaunch.png"
+      "imageUrl":"img/categories/productLaunch.png"
    }
 ]

@@ -28,21 +28,21 @@ angular.module('starter', ['ionic','facebook'])
     url :'/getStarted',
     templateUrl: 'template/getStarted.html'
   })
-  .state('venueFinder',{
-    url: '/venueFinder',
-    templateUrl: 'template/venuefinder.html'
-  })
-  .state('venueFinder.pax',{
-    url: '/venueFinder/:categoryId',
-    templateUrl: 'template/venuefinder.html'
-  })
-  .state('venueFinder.pickVenue',{
-    url: '/venueFinder/:categoryId/:paxRange',
-    templateUrl: 'template/venuefinder.html'
-  })
   .state('hostVenue',{
     url: '/hostVenue',
     templateUrl: 'template/hostVenue.html'
+  })
+  .state('findVenue',{
+    url: '/findVenue',
+    templateUrl: 'template/findVenue.html'
+  })
+  .state('findVenue.pax',{
+    url: '/findVenue/:categoryId',
+    templateUrl: 'template/findVenue.html'
+  })
+  .state('findVenue.pickVenue',{
+    url: '/findVenue/:categoryId/:paxRange',
+    templateUrl: 'template/findVenue.html'
   })
 })
 .config(function(FacebookProvider) {
