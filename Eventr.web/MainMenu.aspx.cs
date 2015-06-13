@@ -15,4 +15,8 @@ public partial class MainMenu : System.Web.UI.Page
     {
         Response.Redirect("CreateVenue.aspx");
     }
+    protected void btnCreateAdditionalService_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CreateEventService.aspx");
+    }
 }

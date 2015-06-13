@@ -3,17 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    Welcome once again to Eventr. What would you like to do?
-    <table style="width:100%;border-collapse: separate;border-spacing: 10px 50px;">
+    <h1 style="text-align:center;">Welcome back to Eventr, Derek. How can I help you for your event?</h1>
+    <table style="width:100%;border-collapse: separate;border-spacing: 10px 30px;">
         <tr>
-            <td style="width:31%; background-color:purple; margin: 5px;">
-                <asp:Button ID="btnRentVenue" runat="server" Text="Rent a Venue" />
+            <td style="width:31%; margin: 5px; text-align:center;">
+                <img src="Images/mobile-main-01-text.png" runat="server"/>
             </td>
-            <td style="width:31%; background-color: red; margin: 5px;">
-                <asp:Button ID="btnCreateVenue" runat="server" Text="Create a Venue" OnClick="btnCreateVenue_Click" />
+            <td style="width:31%; margin: 5px; text-align:center;">
+                <asp:ImageButton ID="imgCreateVenue" runat="server" ImageUrl="~/Images/mobile-swipe-bg02-text.png" OnClick="btnCreateVenue_Click"/>
             </td>
-            <td style="width:31%; background-color: orange; margin: 5px;">
-                <asp:Button ID="btnCreateAdditionalService" runat="server" Text="Create an Event Service" />
+            <td style="width:31%; margin: 5px; text-align:center;">
+                <asp:ImageButton ID="Image1" runat="server" ImageUrl="~/Images/mobile-swipe-bg03-text.png" OnClick="btnCreateAdditionalService_Click"/>
             </td>
         </tr>
     </table>
