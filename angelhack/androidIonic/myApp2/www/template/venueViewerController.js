@@ -8,19 +8,24 @@ function getData(){
 
     if(venueId != "" && venueId != undefined){
 
-      $http.get('json/venues.json').success(function(data){
+   $http.get('https://graph.facebook.com/'+venueId).success(function(data){
+           $scope.selectedVenue = data;
+      });
+    }
+
+      // $http.get('json/venues.json').success(function(data){
         
 
-          data.forEach(function(item){
+      //     data.forEach(function(item){
 
-                if(item.id == venueId){
-                  $scope.selectedVenue = item;
-                }
-            })
+      //           if(item.id == venueId){
+      //             $scope.selectedVenue = item;
+      //           }
+      //       })
 
-      });
+      // });
 
-    }
+    //}
 }
 	});
 

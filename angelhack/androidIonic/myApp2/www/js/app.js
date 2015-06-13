@@ -56,4 +56,10 @@ angular.module('starter', ['ionic','ngOpenFB','facebook'])
      // use the shortcut in the initialize method directly.
      FacebookProvider.init('903664066366504');
   })
-;
+.config( [
+    '$compileProvider',
+    function( $compileProvider )
+    {   
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|tel|geo):/);
+        // Angular before v1.2 uses $compileProvider.urlSanitizationWhitelist(...)
+    }]);
