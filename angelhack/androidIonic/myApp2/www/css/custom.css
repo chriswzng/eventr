@@ -120,3 +120,28 @@
     -ms-flex-align: center;
     align-items: center;
 }
+
+.venueListAvatar{
+  width:80px;
+  height:80px;
+  border-radius: 0%;
+  float:left;
+  padding-bottom: 0px;
+}
+
+.venueListLabel{
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.venueListText{
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.venueListCost {
+  font-size: 18px;
+  color: #27a555;
+  font-weight: bold;
+}

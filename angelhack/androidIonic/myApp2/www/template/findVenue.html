@@ -86,13 +86,29 @@
     </ion-content>
 
     <ion-content class="has-header" ng-show="currentStep() == 2">
+        <div class="row" style="padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px; position: relative: left: 0; top: 0;">
+            <img src="img/mobile-list-of-venue-top-bg-crop.png" style="position: relative; top: 0; left: 0;"/>
+            <img src="img/building-icon.png" style="position: absolute; top: 75px; left: 10px;"/>
+            <span style="position: absolute; top: 90px; left: 70px; color:#ffffff; font-size: 25px;">List of Venues</span>
+        </div>
+
         <ion-list>
-            <ion-item ng-repeat="item in venues" class="item item-avatar">
-                <img ng-src="{{item.imageUrl}}" style="height:100px;">
-                <h2>{{item.name}}</h2>
-                <button class="button button-clear button-positive" ng-click="viewDetails(item.id)">
-  View
-</button>
+            <ion-item ng-repeat="item in venues" style="padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;" ng-click="viewDetails(item.id)">
+                <img ng-src="{{item.imageUrl}}" class="venueListAvatar">
+                <div>
+                    <span class="venueListLabel">{{item.name}}</span><br />
+                    <span class="venueListText">{{item.city}}, {{item.state}}</span><br />
+                    <div style="padding-top:10px;">
+                        <img src="img/rating-star.png" style="padding-left:10px; padding-top:5px; float: left;" />
+                        <img src="img/rating-star.png" style="padding-left:2px; padding-top:5px; float: left;" ng-repeat="star in item.stars" />
+                        <div style="text-align: right; padding-right:5px;">
+                            <span class="venueListCost">{{item.cost}}</span>
+                            <span style="font-size: 10px;"> per hour</span>
+                        </div>
+                    </div>
+                   <!--  <button class="button button-clear button-positive" ng-click="viewDetails(item.id)">View
+                    </button> -->
+                </div>
             </ion-item>
         </ion-list> 
     </ion-content>

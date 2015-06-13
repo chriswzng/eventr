@@ -12,7 +12,8 @@
       "longitude": 101.70637882555,
       "city": "Jalan Bukit Bintang",
       "state": "Kuala Lumpur",
-      "cost": "$1000"
+      "cost": "RM 1000",
+      "stars": [1,2,3]
    },
    {  
       "id":"2",
@@ -26,8 +27,9 @@
       "latitude": 3.1540300323989,
       "longitude": 101.70637882555,
       "city": "Jalan Bukit Bintang",
-      "state": "Kuala Lumpur"
-      "cost": "$1000"
+      "state": "Kuala Lumpur",
+      "cost": "RM 1000",
+      "stars": [1,2,3]
    },
    {  
       "id":"3",
@@ -41,7 +43,9 @@
       "latitude": 3.1554144067637,
       "longitude": 101.70561215789,
       "city": "Sultan Ismail",
-      "state": "Kuala Lumpur"
-      "cost": "$1000"
+      "state": "Kuala Lumpur",
+      "cost": "RM 1000",
+      "stars": [1,2]
    }
+
 ]
