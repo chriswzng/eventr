@@ -1,3 +1,37 @@
-<ion-content ng-controller="HostVenueController">
-<span>test</span>
+<ion-content ng-controller="HostVenueController" class="center">
+<div class="row">
+   <div class="col text-center">
+      <span style="text-align:center;">Location</span><br/>
+   </div>
+</div>
+
+<div class="row" ng-class="{'no-padding-top': !data.editItem}">
+ 	<div class="col">
+        <label class="item item-input large">
+            <input type="text" placeholder="Your location">
+         </label>
+    </div>
+</div>
+
+<div class="row">
+   <div class="col text-center">
+      <span style="text-align:center;">Date Available From</span><br/>
+   </div>
+</div>
+
+<ionic-datepicker idate="currentDate" disablepreviousdates="true" class="center" callback="datePickerCallback">
+	<button class="button button-block button-positive" style="max-width:70%;"> {{ currentDate | date:'dd - MMMM - yyyy' }} </button>
+</ionic-datepicker>	
+
+<div class="row">
+   <div class="col text-center">
+      <span style="text-align:center;">Time Available From</span><br/>
+   </div>
+</div>
+
+<ionic-timepicker etime="slots.epochTime" format="slots.format" class="center" step="slots.step" callback="timePickerCallback">    
+	<button class="button button-block button-positive" style="max-width:70%;"> {{slots.epochTime}} </button>
+</ionic-timepicker>
+
+
 </ion-content>
