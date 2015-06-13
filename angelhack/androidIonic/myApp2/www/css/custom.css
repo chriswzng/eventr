@@ -1,4 +1,4 @@
-.scroll-content {
+/*.scroll-content {
   display: table !important;
   width: 100% !important;
   height: 100% !important;
@@ -7,8 +7,63 @@
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-}
+}*/
 .slider {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.slider-pager .slider-pager-page{
+    color: #ffffff;
+}
+
+.getStartedText {
+    color: #ffffff;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    position: relative;
+    top: 50%;
+}.slider {
+  width: 100%;
+  height: 100%;
+}
+
+
+.imageTextWrapper {
+  position: relative;
+}
+
+.imageText {
+  top: 5%;
+  color: white;
+  font-size: 1.25em;
+  left: 0;
+  padding-left:25px;
+  position: absolute;
+}
+
+.imageTextSeperator {
+  background-color: #fff;
+  color: #444;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: -1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-size: 16px;
+}
+
+
+.button-clear2.button-clear2 {
+  border-color: transparent;
+  background: none;
+  box-shadow: none;
+  color: #FFFFFF;
 }

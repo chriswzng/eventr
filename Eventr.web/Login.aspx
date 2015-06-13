@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div>Sign In</div>
+    <h1>Sign In</h1>
     <table>
         <tr>
             <td>
@@ -12,13 +12,13 @@
             </td>
         </tr>
         <tr>
-            <td>
-                Password:<br />
+            <td style="padding-top:20px;">
+                Password (or <a href="#" style="color:#26a9e0;">did you forget?</a>):<br />
                 <asp:TextBox ID="txtLogin" runat="server" TextMode="Password"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td>
+            <td style="padding-top:20px;">
                 <asp:Button ID="btnLogin" runat="server" Text="Log in" OnClick="btnLogin_Click" />
             </td>
         </tr>
