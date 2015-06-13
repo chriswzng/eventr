@@ -15,5 +15,15 @@ namespace EventrAPI.Repositories
         {
             throw new NotImplementedException();
         }
+
+        internal bool AddVenue()
+        {
+            return Commit();
+        }
+
+        internal bool UpdateVenue()
+        {
+            return Commit();
+        }
     }
 }

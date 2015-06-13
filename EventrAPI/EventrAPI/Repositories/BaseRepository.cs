@@ -14,5 +14,10 @@ namespace EventrAPI.Repositories
         {
             DataContext = new ModelContainer();
         }
+
+        protected bool Commit()
+        {
+            return DataContext.SaveChanges() != 0;
+        }
     }
 }
