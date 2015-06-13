@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Eventr.API.Contracts
 {
-    public class Booking
+    public class BookingContract
     {
     }
 }

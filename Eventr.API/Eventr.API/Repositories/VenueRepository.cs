@@ -18,15 +18,14 @@ namespace Eventr.API.Repositories
             return DataContext.VenueEnts.ToList();
         }
 
-        internal bool AddVenue(VenueEnt venueEnt)
+        internal void AddVenue(VenueEnt venueEnt)
         {
             DataContext.VenueEnts.Add(venueEnt);
-            return Commit();
         }
 
-        internal bool UpdateVenue(VenueEnt venueEnt)
+        internal void UpdateVenue(VenueEnt venueEnt)
         {
-            return Commit();
+
         }
     }
 }

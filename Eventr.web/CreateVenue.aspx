@@ -12,10 +12,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     Location:<br />
-    <asp:TextBox ID="txtLocation" runat="server"></asp:TextBox><br /><br />
+    <asp:TextBox ID="txtLocation" runat="server" AutoPostBack="true" OnTextChanged="txtLocation_TextChanged"></asp:TextBox><br /><br />
 
     Dates Available:<br />
-    From: <input type="text" id="datepickerFrom">   To: <input type="text" id="datepickerTo"><br /><br />
+    From: <input type="text" id="datepickerFrom"/>   To: <input type="text" id="datepickerTo"/><br /><br />
 
     Time Available:<br />
     From: <input type="text" id="timepickerFrom">   To: <input type="text" id="timepickerTo"><br /><br /> 

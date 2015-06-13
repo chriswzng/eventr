@@ -5,9 +5,9 @@ using System.Web;
 
 namespace Eventr.API.Contracts
 {
-    public class Venue
+    public class VenueContract
     {
-        public Guid Id ;
+        public Guid Id;
         public string Location;
         public int MinPax;
         public int MaxPax;

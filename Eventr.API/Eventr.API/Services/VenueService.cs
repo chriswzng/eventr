@@ -11,23 +11,17 @@ namespace Eventr.API.Services
 {
     public class VenueService
     {
-        internal IEnumerable<Venue> GetVenues()
+        internal IEnumerable<VenueContract> GetVenues()
         {
             VenueRepository venueRepository = new VenueRepository();
             List<VenueEnt> venueEnts = venueRepository.GetVenues();
-            List<Venue> venueList = new List<Venue>();
 
-            foreach (VenueEnt venueEnt in venueEnts)
-            {
-                venueList.Add(ConvertToContract(venueEnt));
-            }
-
-            return venueList;
+            return ConvertToContract(venueEnts);
         }
 
-        private Venue ConvertToContract(VenueEnt venueEnt)
+        private VenueContract ConvertToContract(VenueEnt venueEnt)
         {
-            Venue venue = new Venue();
+            VenueContract venue = new VenueContract();
             venue.Id = venueEnt.Id;
             venue.Location = venueEnt.Location;
             venue.MinPax = venueEnt.MinPax;
@@ -44,9 +38,45 @@ namespace Eventr.API.Services
             return venue;
         }
 
-        private object ConvertToContract(object venue)
+        private IEnumerable<VenueContract> ConvertToContract(IEnumerable<VenueEnt> venueEnts)
         {
-            throw new NotImplementedException();
+            List<VenueContract> venueContracts = new List<VenueContract>();
+            foreach (VenueEnt venueEnt in venueEnts)
+            {
+                venueContracts.Add(ConvertToContract(venueEnt));
+            }
+
+            return venueContracts;
+        }
+
+        internal Guid CreateVenue(VenueContract venueContract)
+        {
+            VenueEnt venueEnt = new VenueEnt();
+            venueEnt.Id = Guid.NewGuid();
+            venueEnt.Cost = venueContract.Cost;
+            venueEnt.startDate = venueContract.StartDate;
+            venueEnt.startTime = venueContract.StartTime;
+            venueEnt.endDate = venueContract.EndDate;
+            venueEnt.endTime = venueContract.EndTime;
+            venueEnt.IsFullDay = venueContract.IsFullDay;
+            venueEnt.IsSupportWeekDay = venueContract.IsSupportWeekDay;
+            venueEnt.IsSupportWeekEnd = venueContract.IsSupportWeekEnd;
+            venueEnt.MinPax = venueContract.MinPax;
+            venueEnt.MaxPax = venueContract.MaxPax;
+            
+            UserVenueEnt userVenueEnt = new UserVenueEnt();
+            userVenueEnt.Id = Guid.NewGuid();
+            userVenueEnt.UserId = Guid.NewGuid();
+
+            venueEnt.UserVenues.Add(userVenueEnt);
+
+            VenueRepository venueRepository = new VenueRepository();
+            venueRepository.AddVenue(venueEnt);
+            
+            if (venueRepository.Commit())
+                return venueEnt.Id;
+
+            return Guid.Empty;
         }
     }
 }
