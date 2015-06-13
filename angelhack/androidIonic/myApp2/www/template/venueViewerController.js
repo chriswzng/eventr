@@ -27,7 +27,7 @@ angular.module('starter')
 
    $scope.completeBooking = function(){
 
-    $state.go('bookingComplete', {venueId: $state.params.venueId});
+    $state.go('bookingConfirmation', {venueId: $state.params.venueId});
    }
 
  }

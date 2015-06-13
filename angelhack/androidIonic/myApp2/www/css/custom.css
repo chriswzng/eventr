@@ -71,7 +71,7 @@
 
 .stepsInstruction {
   color:#ffffff; 
-  background-color:#111; 
+  background-color:#333; 
   height: 30px; 
   font-size: 15px;
   padding-top: 3px;
@@ -145,4 +145,10 @@
   font-size: 18px;
   color: #27a555;
   font-weight: bold;
+}
+
+.confirmationLabels {
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 10px;
 }

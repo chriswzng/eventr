@@ -61,6 +61,10 @@ angular.module('starter', ['ionic','ngOpenFB','facebook','ionic-datepicker','ion
     url: '/eventBriteCreator',
     templateUrl: 'template/eventBriteCreator.html'
   })
+  .state('bookingConfirmation',{
+    url: '/bookingConfirmation',
+    templateUrl: 'template/bookingConfirmation.html'
+  })
 })
 .config(function(FacebookProvider) {
      // Set your appId through the setAppId method or
