@@ -45,6 +45,10 @@ angular.module('starter', ['ionic','ngOpenFB','facebook'])
     url: '/findVenue/:categoryId/:paxRange',
     templateUrl: 'template/findVenue.html'
   })
+  .state('venueViewer',{
+    url: '/venueViewer/:venueId',
+    templateUrl: 'template/venueViewer.html'
+  })
 })
 .config(function(FacebookProvider) {
      // Set your appId through the setAppId method or
