@@ -1,5 +1,5 @@
 angular.module('starter')
-.controller('FindVenueController', function($scope, $ionicModal, $http, $state, Facebook) {
+.controller('FindVenueController', function($scope, $ionicModal, $http, $state) {
     $scope.sliderIndex =0;
     $scope.headerText =[
         'Step 1: Select Event',
@@ -50,15 +50,15 @@ angular.module('starter')
          $scope.venues = data.data;
     });
     }
-getLoginStatus();
-    function getLoginStatus() {
-      Facebook.getLoginStatus(function(response) {
-        if(response.status === 'connected') {
-           findPlaces(response.authResponse.accessToken);
+//getLoginStatus();
+    // function getLoginStatus() {
+    //   Facebook.getLoginStatus(function(response) {
+    //     if(response.status === 'connected') {
+    //        findPlaces(response.authResponse.accessToken);
 
-        } else {
-        }
-      });
-    }
+    //     } else {
+    //     }
+    //   });
+    // }
 
 });

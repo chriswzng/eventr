@@ -4,11 +4,11 @@
     
 </div>
  <ion-content class="content has-header">
-  <div class="hero has-mask " style="background-image: url('img/wedding-3.jpg');height: 150px;" ng-style="{'background-image' : 'url(' + selectedVenue.cover.source + ')'}">
+  <div class="hero has-mask " style="background-image: url('img/wedding-3.jpg');height: 150px;" ng-style="{'background-image' : 'url(' + selectedVenue.bannerImg + ')'}">
             <div style="position:absolute;right:0px;top:90px">
                
                 <button class="button button-large button-clear2 flat waves-effect waves-button waves-light icon ion-images pull-right text-white"></button>
-                <a class="button button-large button-clear2 flat waves-effect waves-button waves-light icon ion-map pull-right text-white" ng-href="geo:{{selectedVenue.location.latitude}},{{selectedVenue.location.longitude}}"></a>
+                <a class="button button-large button-clear2 flat waves-effect waves-button waves-light icon ion-map pull-right text-white" ng-href="geo:{{selectedVenue.latitude}},{{selectedVenue.longitude}}"></a>
             </div>
            
         </div>
