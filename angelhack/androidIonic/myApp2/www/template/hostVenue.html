@@ -4,7 +4,6 @@
       <span style="text-align:center;">Location</span><br/>
    </div>
 </div>
-
 <div class="row" ng-class="{'no-padding-top': !data.editItem}">
  	<div class="col">
         <label class="item item-input large">
@@ -18,9 +17,17 @@
       <span style="text-align:center;">Date Available From</span><br/>
    </div>
 </div>
+<ionic-datepicker idate="fromDate" disablepreviousdates="true" class="center" callback="fromDatePickerCallback">
+	<button class="button button-positive" style="max-width:70%;"> {{ fromDate | date:'dd - MMMM - yyyy' }} </button>
+</ionic-datepicker>	
 
-<ionic-datepicker idate="currentDate" disablepreviousdates="true" class="center" callback="datePickerCallback">
-	<button class="button button-block button-positive" style="max-width:70%;"> {{ currentDate | date:'dd - MMMM - yyyy' }} </button>
+<div class="row">
+   <div class="col text-center">
+      <span style="text-align:center;">to</span><br/>
+   </div>
+</div>
+<ionic-datepicker idate="toDate" disablepreviousdates="true" class="center" callback="toDatePickerCallback">
+	<button class="button button-positive" style="max-width:70%;"> {{ toDate | date:'dd - MMMM - yyyy' }} </button>
 </ionic-datepicker>	
 
 <div class="row">
@@ -28,10 +35,47 @@
       <span style="text-align:center;">Time Available From</span><br/>
    </div>
 </div>
-
-<ionic-timepicker etime="slots.epochTime" format="slots.format" class="center" step="slots.step" callback="timePickerCallback">    
-	<button class="button button-block button-positive" style="max-width:70%;"> {{slots.epochTime}} </button>
+<ionic-timepicker etime="slots[0].epochTime" format="slots[0].format" class="center" step="slots[0].step" callback="timePickerCallback">    
+	<button class="button button-positive" style="max-width:70%;"> {{(slots[0].epochTime*1000)-28800000 | date:'HH:mm a'}} </button>
 </ionic-timepicker>
 
+<div class="row">
+   <div class="col text-center">
+      <span style="text-align:center;">to</span><br/>
+   </div>
+</div>
+<ionic-timepicker etime="slots[1].epochTime" format="slots[1].format" class="center" step="slots[1].step" callback="timePickerCallback">    
+	<button class="button button-positive" style="max-width:70%;"> {{(slots[0].epochTime*1000)-28800000 | date:'HH:mm a'}} </button>
+</ionic-timepicker>
 
+<div class="row">
+   <div class="col text-center">
+      <span style="text-align:center;">Number of Attendees</span><br/>
+   </div>
+</div>
+<div class="row" ng-class="{'no-padding-top': !data.editItem}">
+ 	<div class="col">
+        <label class="item item-input large">
+            <input type="text" placeholder="Min">
+         </label>
+    </div>
+</div>
+<div class="row">
+   <div class="col text-center">
+      <span style="text-align:center;">to</span><br/>
+   </div>
+</div>
+<div class="row" ng-class="{'no-padding-top': !data.editItem}">
+ 	<div class="col">
+        <label class="item item-input large">
+            <input type="text" placeholder="Max">
+         </label>
+    </div>
+</div>
+
+<div class="row">
+   <div class="col text-center">
+      <span style="text-align:center;">Event Categories</span><br/>
+   </div>
+</div>
 </ion-content>
