@@ -1,9 +1,9 @@
 angular.module('starter')
 .controller('VenueViewerController', function($scope, $ionicModal, $state, $http) {
 
-getData();
+  getData();
 
-function getData(){
+  function getData(){
     var venueId = $state.params.venueId;
 
     if(venueId != "" && venueId != undefined){
@@ -13,20 +13,25 @@ function getData(){
    //    });
    //  }
 
-      $http.get('json/venues.json').success(function(data){
-        
+   $http.get('json/venues.json').success(function(data){
 
-          data.forEach(function(item){
 
-                if(item.id == venueId){
-                  $scope.selectedVenue = item;
-                }
-            })
+    data.forEach(function(item){
 
-      });
+      if(item.id == venueId){
+        $scope.selectedVenue = item;
+      }
+    })
 
-    }
+  });
+
+   $scope.completeBooking = function(){
+
+    $state.go('bookingComplete', {venueId: $state.params.venueId});
+   }
+
+ }
 }
-	});
+});
 
 

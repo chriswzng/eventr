@@ -8,6 +8,7 @@
       "description":"Nestled amidst lush greenery in the heart of the city, Shangri-La Hotel, Kuala Lumpur is just moments from the city's leading business, shopping and entertainment district. The hotel is merely a walking distance to the city's iconic Petronas Twin Towers and Kuala Lumpur Tower.",
       "rating":"4.4",
       "phone":"03-53319446",
+      "price":"RM 1050",
       "latitude": 3.1540300323989,
       "longitude": 101.70637882555
 
@@ -21,6 +22,7 @@
       "description":"Nestled amidst lush greenery in the heart of the city, Shangri-La Hotel, Kuala Lumpur is just moments from the city's leading business, shopping and entertainment district. The hotel is merely a walking distance to the city's iconic Petronas Twin Towers and Kuala Lumpur Tower.",
       "rating":"4.4",
       "phone":"03-53319446",
+      "price":"RM 1050",
       "latitude": 3.1540300323989,
       "longitude": 101.70637882555
    },
@@ -33,6 +35,7 @@
       "description":"With the hottest trends, delicious food, awesome music, high-energy environment and a rockin’ good time! THIS IS Hard Rock Cafe Kuala Lumpur!",
       "rating":"4.5",
       "phone":"03-24193719",
+      "price":"RM 500",
       "latitude": 3.1554144067637,
       "longitude": 101.70561215789
    }

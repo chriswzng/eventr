@@ -1,0 +1,24 @@
+<div ng-controller="OtherServicesController">
+<div class="bar bar-header bar-stable">
+  <h1 class="title">Recommended services</h1>
+
+</div>
+<ion-content class="has-header">
+  <div>These are a list of services we found that might suit your event</div>
+  <ion-list>
+  <ion-item ng-repeat="item in services" class="item item-avatar">
+
+  <img ng-src="{{item.imageUrl}}">
+      <h2>{{item.name}}</h2>
+      <p>{{item.description}}</p>
+      <a class="button button-clear button-positive ion-ios-telephone" href="tel:{{selectedVenue.phone}}">
+  {{item.phone}}
+</a>
+
+  </ion-item>
+</ion-list>
+<button class="button button-full button-positive">
+  Continue
+</button>
+</ion-content>
+</div>

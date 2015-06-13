@@ -1,0 +1,32 @@
+[  
+   {  "id":1,
+      "name":"Cottage Bakers",
+      "description" :"We bake all kinds of cakes for any occasion!",
+      "imageUrl":"http://www.coldstonecreamery.com/assets/img/products/signaturecakes/signature-cakes-strawberrypassion.jpg",
+      "phone":"03-3221461"
+   },
+   {  "id":2,
+      "name":"All Canopies",
+      "description" :"Canopies of all sizes for your needs",
+      "imageUrl":"http://meenacanopyandtentsrental.yolasite.com/resources/canopy%202.jpg",
+      "phone":"03-9543647"
+   },
+   {  "id":3,
+      "name":"Party Fun Apparels",
+      "description" :"Having a party? Come drop by and visit us to spice up your party!",
+      "imageUrl":"http://static.giantbomb.com/uploads/scale_small/1/13313/1318900-party_hat.jpg",
+      "phone":"03-1135675"
+   },
+   {  "id":4,
+      "name":"Clown Factory",
+      "description" :"We have clowns that are guaranteed to make you laugh!",
+      "imageUrl":"http://previews.123rf.com/images/dejanj01/dejanj010910/dejanj01091000016/5682610-Smiley-ball-as-clown-in-the-circus-Stock-Vector-cartoon.jpg",
+      "phone":"03-6538874"
+   },
+   {  "id":5,
+      "name":"Cupcake Galore",
+      "description" :"Customized cupcakes for any event.",
+      "imageUrl":"https://easybaked.files.wordpress.com/2013/03/strawberry-lemonade-cupcake2.jpg",
+      "phone":"03-6474749"
+   }
+]
