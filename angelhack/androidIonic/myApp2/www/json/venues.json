@@ -4,18 +4,31 @@
       "name":"Hall A, Shangri-La Hotel",
       "imageUrl":"img/shangrila.jpg",
       "path":"dashboard",
-      "bannerImgUrl":"img/hardrock2.jpg"
+      "bannerImg":"img/hardrock2.jpg",
+      "bannerImg":"img/shangrila2.jpg",
+      "description":"Nestled amidst lush greenery in the heart of the city, Shangri-La Hotel, Kuala Lumpur is just moments from the city's leading business, shopping and entertainment district. The hotel is merely a walking distance to the city's iconic Petronas Twin Towers and Kuala Lumpur Tower.",
+      "rating":"4.4",
+      "phone":"03-53319446"
+
    },
    {  
       "id":"2",
       "name":"Hall B, Shangri-La  Hotel",
       "imageUrl":"img/shangrila.jpg",
-      "path":"dashboard"
+      "path":"dashboard",
+      "bannerImg":"img/shangrila2.jpg",
+      "description":"Nestled amidst lush greenery in the heart of the city, Shangri-La Hotel, Kuala Lumpur is just moments from the city's leading business, shopping and entertainment district. The hotel is merely a walking distance to the city's iconic Petronas Twin Towers and Kuala Lumpur Tower.",
+      "rating":"4.4",
+      "phone":"03-53319446"
    },
    {  
       "id":"3",
       "name":"Hard Rock Cafe- KL",
+      "price":"RM 850",
       "imageUrl":"img/hardrock.jpg",
-      "bannerImgUrl":"img/hardrock2.jpg"
+      "bannerImg":"img/hardrock2.jpg",
+      "description":"With the hottest trends, delicious food, awesome music, high-energy environment and a rockin’ good time! THIS IS Hard Rock Cafe Kuala Lumpur!",
+      "rating":"4.5",
+      "phone":"03-24193719"
    }
 ]
