@@ -9,11 +9,12 @@
             $("#datepickerFrom").datepicker();
             $("#datepickerTo").datepicker();
             $("#timepickerFrom").timepicker();
+            $("#timepickerTo").timepicker();
 
             $.get("https://graph.facebook.com/oauth/access_token?client_id=903664066366504&client_secret=46f1495831af757b9ecd51333f1a2606&grant_type=client_credentials", function (response) {
                 accessToken = response.split('=')[1];
             }).error(function () {
-                alert("Sorry could not proceed")
+                alert("Sorry, unable to get FB Access Token")
             });
         });
 
