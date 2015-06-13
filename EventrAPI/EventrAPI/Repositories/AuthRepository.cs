@@ -8,6 +8,10 @@ namespace EventrAPI.Repositories
 {
     public class AuthRepository : BaseRepository
     {
+        public AuthRepository() : base()
+        {
+        }
+
         internal Guid GetUserIdByUsername(string username)
         {
             Guid userId = DataContext.UserEnts.Where(u => u.email == username).Select(u => u.Id).FirstOrDefault();
