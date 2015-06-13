@@ -8,11 +8,11 @@ namespace Eventr.API.Repositories
 {
     public abstract class BaseRepository
     {
-        protected EventrEntities DataContext;
+        protected EventrAPIEntities1 DataContext;
 
         public BaseRepository()
         {
-            DataContext = new EventrEntities();
+            DataContext = new EventrAPIEntities1();
         }
 
         protected bool Commit()

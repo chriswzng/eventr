@@ -15,27 +15,34 @@ namespace Eventr.API.Services
         {
             VenueRepository venueRepository = new VenueRepository();
             List<VenueEnt> venueEnts = venueRepository.GetVenues();
-          
+            List<Venue> venueList = new List<Venue>();
 
+            foreach (VenueEnt venueEnt in venueEnts)
+            {
+                venueList.Add(ConvertToContract(venueEnt));
+            }
 
-            //foreach(VenueEnt venueEnt in venueEnts)
-            //{
-
-            //}
-
+            return venueList;
         }
 
-        private IEnumerable<object> 
+        private Venue ConvertToContract(VenueEnt venueEnt)
+        {
+            Venue venue = new Venue();
+            venue.Id = venueEnt.Id;
+            venue.Location = venueEnt.Location;
+            venue.MinPax = venueEnt.MinPax;
+            venue.MaxPax = venueEnt.MaxPax;
+            venue.Cost = venueEnt.Cost;
+            venue.StartDate = venueEnt.startDate;
+            venue.EndDate = venueEnt.endDate;
+            venue.StartTime = venueEnt.startTime;
+            venue.EndTime = venueEnt.endTime;
+            venue.IsFullDay = venueEnt.IsFullDay;
+            venue.IsSupportWeekDay = venueEnt.IsSupportWeekDay;
+            venue.IsSupportWeekEnd = venueEnt.IsSupportWeekEnd;
 
-
-        //private Venue ConvertToContract(VenueEnt venueEnt)
-        //{
-        //    Venue venue = new Venue();
-        //    venue.Cost = venueEnt.Cost;
-        //    venue.EndDate = venueEnt.endDate;  
-          
-        //    return venue;
-        //}
+            return venue;
+        }
 
         private object ConvertToContract(object venue)
         {
