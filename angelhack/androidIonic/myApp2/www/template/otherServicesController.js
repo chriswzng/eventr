@@ -8,8 +8,8 @@ angular.module('starter')
 
   });
 
-   $scope.makePayment = function(){
-   	$state.go('otherServices');
+   $scope.completeStep = function(){
+    $state.go('eventBriteCreator');
    }
 
 });
