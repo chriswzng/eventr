@@ -28,6 +28,18 @@ angular.module('starter', ['ionic','facebook'])
     url :'/getStarted',
     templateUrl: 'template/getStarted.html'
   })
+  .state('venueFinder',{
+    url: '/venueFinder',
+    templateUrl: 'template/venuefinder.html'
+  })
+  .state('venueFinder.pax',{
+    url: '/venueFinder/:categoryId',
+    templateUrl: 'template/venuefinder.html'
+  })
+  .state('venueFinder.pickVenue',{
+    url: '/venueFinder/:categoryId/:paxRange',
+    templateUrl: 'template/venuefinder.html'
+  })
 })
 .config(function(FacebookProvider) {
      // Set your appId through the setAppId method or

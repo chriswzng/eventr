@@ -1,0 +1,11 @@
+[  
+   {  "id":1,
+      "name":"Birthday Party",
+      "imageUrl":"../img/categories/bday.png"
+   },
+   {  "id":2,
+      "name":"Wedding",
+      "imageUrl":"../img/categories/wedding.png"
+   }
+   
+]

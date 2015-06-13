@@ -1,0 +1,16 @@
+[  
+   {  
+      "name":"Hall A, Shangri-La Hotel",
+      "imageUrl":"../img/shangrila.jpg",
+      "path":"dashboard"
+   },
+   {  
+      "name":"Hall B, Shangri-La  Hotel",
+      "imageUrl":"../img/shangrila.jpg",
+      "path":"dashboard"
+   },
+   {  
+      "name":"Hard Rock - KL",
+      "imageUrl":"../img/hardrock.jpg"
+   }
+]
