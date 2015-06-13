@@ -14,7 +14,6 @@ namespace EventrAPI.Models
     
     public partial class BookingAdditionalServiceEnt
     {
-        public System.Guid ID { get; set; }
         public Nullable<System.Guid> BookingID { get; set; }
         public Nullable<System.Guid> AdditionalServiceID { get; set; }
         public System.Guid Id { get; set; }

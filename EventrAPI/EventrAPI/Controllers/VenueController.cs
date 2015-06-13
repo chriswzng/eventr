@@ -1,4 +1,5 @@
-﻿using EventrAPI.Services;
+﻿using EventrAPI.Authorization;
+using EventrAPI.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Web.Http;
 
 namespace EventrAPI.Controllers
 {
+    [HttpAuthorizeAttribute]
     [RoutePrefix("venue")]
     public class VenueController : ApiController
     {

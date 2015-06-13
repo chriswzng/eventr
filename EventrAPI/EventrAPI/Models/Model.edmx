@@ -331,10 +331,8 @@
         </EntityType>
         <EntityType Name="BookingAdditionalServiceEnt">
           <Key>
-            <PropertyRef Name="ID" />
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="ID" Type="Guid" Nullable="false" />
           <Property Name="BookingID" Type="Guid" />
           <Property Name="AdditionalServiceID" Type="Guid" />
           <Property Name="Id" Type="Guid" Nullable="false" />
