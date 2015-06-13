@@ -9,7 +9,6 @@ using System.Web.Http;
 
 namespace Eventr.API.Controllers
 {
-    [HttpAuthorizeAttribute]
     [RoutePrefix("venue")]
     public class VenueController : ApiController
     {

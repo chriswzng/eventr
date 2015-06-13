@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EventrAPI.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,17 +12,11 @@ namespace EventrAPI.Controllers
     public class AuthController : ApiController
     {
         [Route("register")]
-        [HttpPost]
+        [HttpGet]
         public bool Register()
         {
-            return true;
-        }
-
-        [Route("login")]
-        [HttpPost]
-        public bool Login()
-        {
-            return true;
+            UserService userService = new UserService();
+            return userService.AddUser();
         }
     }
 }

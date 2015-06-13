@@ -8,7 +8,6 @@ using System.Web.Http;
 
 namespace Eventr.API.Controllers
 {
-    [HttpAuthorizeAttribute]
     [RoutePrefix("booking")]
     public class BookingController : ApiController
     {
