@@ -15,7 +15,7 @@ namespace Eventr.API.Repositories
             DataContext = new EventrAPIEntities1();
         }
 
-        protected bool Commit()
+        public bool Commit()
         {
             return DataContext.SaveChanges() != 0;
         }

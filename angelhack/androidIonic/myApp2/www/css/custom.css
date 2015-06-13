@@ -11,6 +11,27 @@
 .slider {
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.slider-pager .slider-pager-page{
+    color: #ffffff;
+}
+
+.getStartedText {
+    color: #ffffff;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    position: relative;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+}.slider {
+  width: 100%;
+  height: 100%;
 }
 
 
