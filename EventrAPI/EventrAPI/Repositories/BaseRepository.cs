@@ -6,7 +6,7 @@ using System.Web;
 
 namespace EventrAPI.Repositories
 {
-    public class BaseRepository
+    public abstract class BaseRepository
     {
         protected EventrEntities DataContext;
 

@@ -8,9 +8,14 @@ using System.Web.Http;
 
 namespace EventrAPI.Controllers
 {
-    [HttpAuthorizeAttribute]
     [RoutePrefix("user")]
     public class UserController : ApiController
     {
+        [Route("get")]
+        [HttpGet]
+        public object GetUser()
+        {
+            return null;
+        }
     }
 }

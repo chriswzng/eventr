@@ -140,6 +140,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authorization\HttpAuthorizeAttribute.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UserController.cs" />
