@@ -5,7 +5,10 @@ using System.Web;
 
 namespace EventrAPI.Repositories
 {
-    public class BookingRepository
+    public class BookingRepository: BaseRepository
     {
+        public BookingRepository() : base()
+        {
+        }
     }
 }
