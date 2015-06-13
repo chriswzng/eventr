@@ -14,7 +14,14 @@ namespace EventrAPI.Models
     
     public partial class ServiceTypeEnt
     {
+        public ServiceTypeEnt()
+        {
+            this.ServiceTypeEventCategories = new HashSet<ServiceTypeEventCategoryEnt>();
+        }
+    
         public System.Guid Id { get; set; }
         public string Name { get; set; }
+    
+        public virtual ICollection<ServiceTypeEventCategoryEnt> ServiceTypeEventCategories { get; set; }
     }
 }

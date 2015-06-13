@@ -14,6 +14,12 @@ namespace EventrAPI.Models
     
     public partial class VenueEnt
     {
+        public VenueEnt()
+        {
+            this.Bookings = new HashSet<BookingEnt>();
+            this.UserVenues = new HashSet<UserVenueEnt>();
+        }
+    
         public System.Guid Id { get; set; }
         public string Location { get; set; }
         public Nullable<int> MinPax { get; set; }
@@ -26,5 +32,8 @@ namespace EventrAPI.Models
         public Nullable<bool> IsFullDay { get; set; }
         public Nullable<bool> IsSupportWeekDay { get; set; }
         public Nullable<bool> IsSupportWeekEnd { get; set; }
+    
+        public virtual ICollection<BookingEnt> Bookings { get; set; }
+        public virtual ICollection<UserVenueEnt> UserVenues { get; set; }
     }
 }

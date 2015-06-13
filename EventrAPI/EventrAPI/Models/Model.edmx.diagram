@@ -14,6 +14,15 @@
         <EntityTypeShape EntityType="EventrModel.UserEnt" Width="1.5" PointX="6.75" PointY="0.75" />
         <EntityTypeShape EntityType="EventrModel.UserVenueEnt" Width="1.5" PointX="6.75" PointY="3.75" />
         <EntityTypeShape EntityType="EventrModel.VenueEnt" Width="1.5" PointX="4.75" PointY="6.75" />
+        <AssociationConnector Association="EventrModel.FK__BookingAd__Addit__48CFD27E" />
+        <AssociationConnector Association="EventrModel.FK__Booking__EventBr__412EB0B6" />
+        <AssociationConnector Association="EventrModel.FK__Booking__EventCa__4316F928" />
+        <AssociationConnector Association="EventrModel.FK__Booking__VenueId__4222D4EF" />
+        <AssociationConnector Association="EventrModel.FK__BookingAd__Booki__47DBAE45" />
+        <AssociationConnector Association="EventrModel.FK__ServiceTy__Event__38996AB5" />
+        <AssociationConnector Association="EventrModel.FK__ServiceTy__Event__37A5467C" />
+        <AssociationConnector Association="EventrModel.FK__UserVenue__UserI__2A4B4B5E" />
+        <AssociationConnector Association="EventrModel.FK__UserVenue__Venue__2B3F6F97" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

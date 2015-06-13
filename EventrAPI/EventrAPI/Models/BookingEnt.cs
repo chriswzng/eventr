@@ -14,6 +14,11 @@ namespace EventrAPI.Models
     
     public partial class BookingEnt
     {
+        public BookingEnt()
+        {
+            this.BookingAdditionalServices = new HashSet<BookingAdditionalServiceEnt>();
+        }
+    
         public System.Guid Id { get; set; }
         public Nullable<System.Guid> UserId { get; set; }
         public Nullable<System.Guid> VenueId { get; set; }
@@ -22,5 +27,10 @@ namespace EventrAPI.Models
         public Nullable<System.DateTime> BookingTimeTo { get; set; }
         public Nullable<int> Pax { get; set; }
         public string EventBriteID { get; set; }
+    
+        public virtual UserEnt User { get; set; }
+        public virtual EventCategoryEnt EventCategory { get; set; }
+        public virtual VenueEnt Venue { get; set; }
+        public virtual ICollection<BookingAdditionalServiceEnt> BookingAdditionalServices { get; set; }
     }
 }

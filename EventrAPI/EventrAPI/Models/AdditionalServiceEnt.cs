@@ -14,11 +14,18 @@ namespace EventrAPI.Models
     
     public partial class AdditionalServiceEnt
     {
+        public AdditionalServiceEnt()
+        {
+            this.BookingAdditionalServices = new HashSet<BookingAdditionalServiceEnt>();
+        }
+    
         public System.Guid Id { get; set; }
         public Nullable<System.Guid> ServiceTypeID { get; set; }
         public Nullable<System.DateTime> startDate { get; set; }
         public Nullable<System.DateTime> endDate { get; set; }
         public Nullable<System.TimeSpan> startTime { get; set; }
         public Nullable<System.TimeSpan> endTime { get; set; }
+    
+        public virtual ICollection<BookingAdditionalServiceEnt> BookingAdditionalServices { get; set; }
     }
 }

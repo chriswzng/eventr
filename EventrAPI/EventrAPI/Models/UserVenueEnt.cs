@@ -17,5 +17,8 @@ namespace EventrAPI.Models
         public System.Guid Id { get; set; }
         public Nullable<System.Guid> UserId { get; set; }
         public Nullable<System.Guid> VenueId { get; set; }
+    
+        public virtual UserEnt User { get; set; }
+        public virtual VenueEnt Venue { get; set; }
     }
 }

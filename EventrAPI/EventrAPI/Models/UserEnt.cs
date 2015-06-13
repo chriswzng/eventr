@@ -14,10 +14,19 @@ namespace EventrAPI.Models
     
     public partial class UserEnt
     {
+        public UserEnt()
+        {
+            this.Bookings = new HashSet<BookingEnt>();
+            this.UserVenues = new HashSet<UserVenueEnt>();
+        }
+    
         public System.Guid Id { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string email { get; set; }
         public string token { get; set; }
+    
+        public virtual ICollection<BookingEnt> Bookings { get; set; }
+        public virtual ICollection<UserVenueEnt> UserVenues { get; set; }
     }
 }

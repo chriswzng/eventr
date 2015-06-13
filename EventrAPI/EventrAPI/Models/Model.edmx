@@ -31,9 +31,9 @@
         </EntityType>
         <EntityType Name="BookingAdditionalService">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
           <Property Name="BookingID" Type="uniqueidentifier" />
           <Property Name="AdditionalServiceID" Type="uniqueidentifier" />
         </EntityType>
@@ -44,15 +44,6 @@
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="300" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-        <EntityType Name="Media">
-          <Property Name="Id" Type="uniqueidentifier" />
-          <Property Name="VenueId" Type="uniqueidentifier" />
-          <Property Name="AdditionalServiceId" Type="uniqueidentifier" />
-          <Property Name="mediaFileName" Type="nvarchar" MaxLength="300" />
-          <Property Name="filePath" Type="nvarchar(max)" />
-        </EntityType>-->
         <EntityType Name="ServiceType">
           <Key>
             <PropertyRef Name="Id" />
@@ -103,6 +94,114 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <Property Name="IsSupportWeekDay" Type="bit" />
           <Property Name="IsSupportWeekEnd" Type="bit" />
         </EntityType>
+        <Association Name="FK__Booking__EventBr__412EB0B6">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Booking__EventCa__4316F928">
+          <End Role="EventCategory" Type="Self.EventCategory" Multiplicity="0..1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="EventCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Booking__VenueId__4222D4EF">
+          <End Role="Venue" Type="Self.Venue" Multiplicity="0..1" />
+          <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Venue">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Booking">
+              <PropertyRef Name="VenueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BookingAd__Addit__48CFD27E">
+          <End Role="AdditionalService" Type="Self.AdditionalService" Multiplicity="0..1" />
+          <End Role="BookingAdditionalService" Type="Self.BookingAdditionalService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdditionalService">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingAdditionalService">
+              <PropertyRef Name="AdditionalServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BookingAd__Booki__47DBAE45">
+          <End Role="Booking" Type="Self.Booking" Multiplicity="0..1" />
+          <End Role="BookingAdditionalService" Type="Self.BookingAdditionalService" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Booking">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingAdditionalService">
+              <PropertyRef Name="BookingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ServiceTy__Event__37A5467C">
+          <End Role="ServiceType" Type="Self.ServiceType" Multiplicity="0..1" />
+          <End Role="ServiceTypeEventCategory" Type="Self.ServiceTypeEventCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceTypeEventCategory">
+              <PropertyRef Name="ServiceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ServiceTy__Event__38996AB5">
+          <End Role="EventCategory" Type="Self.EventCategory" Multiplicity="0..1" />
+          <End Role="ServiceTypeEventCategory" Type="Self.ServiceTypeEventCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceTypeEventCategory">
+              <PropertyRef Name="EventCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserVenue__UserI__2A4B4B5E">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="UserVenue" Type="Self.UserVenue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserVenue">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserVenue__Venue__2B3F6F97">
+          <End Role="Venue" Type="Self.Venue" Multiplicity="0..1" />
+          <End Role="UserVenue" Type="Self.UserVenue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Venue">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserVenue">
+              <PropertyRef Name="VenueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="EventrModelStoreContainer">
           <EntitySet Name="AdditionalService" EntityType="Self.AdditionalService" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Booking" EntityType="Self.Booking" Schema="dbo" store:Type="Tables" />
@@ -113,6 +212,42 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserVenue" EntityType="Self.UserVenue" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Venue" EntityType="Self.Venue" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Booking__EventBr__412EB0B6" Association="Self.FK__Booking__EventBr__412EB0B6">
+            <End Role="User" EntitySet="User" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Booking__EventCa__4316F928" Association="Self.FK__Booking__EventCa__4316F928">
+            <End Role="EventCategory" EntitySet="EventCategory" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Booking__VenueId__4222D4EF" Association="Self.FK__Booking__VenueId__4222D4EF">
+            <End Role="Venue" EntitySet="Venue" />
+            <End Role="Booking" EntitySet="Booking" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BookingAd__Addit__48CFD27E" Association="Self.FK__BookingAd__Addit__48CFD27E">
+            <End Role="AdditionalService" EntitySet="AdditionalService" />
+            <End Role="BookingAdditionalService" EntitySet="BookingAdditionalService" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BookingAd__Booki__47DBAE45" Association="Self.FK__BookingAd__Booki__47DBAE45">
+            <End Role="Booking" EntitySet="Booking" />
+            <End Role="BookingAdditionalService" EntitySet="BookingAdditionalService" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ServiceTy__Event__37A5467C" Association="Self.FK__ServiceTy__Event__37A5467C">
+            <End Role="ServiceType" EntitySet="ServiceType" />
+            <End Role="ServiceTypeEventCategory" EntitySet="ServiceTypeEventCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ServiceTy__Event__38996AB5" Association="Self.FK__ServiceTy__Event__38996AB5">
+            <End Role="EventCategory" EntitySet="EventCategory" />
+            <End Role="ServiceTypeEventCategory" EntitySet="ServiceTypeEventCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserVenue__UserI__2A4B4B5E" Association="Self.FK__UserVenue__UserI__2A4B4B5E">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserVenue" EntitySet="UserVenue" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserVenue__Venue__2B3F6F97" Association="Self.FK__UserVenue__Venue__2B3F6F97">
+            <End Role="Venue" EntitySet="Venue" />
+            <End Role="UserVenue" EntitySet="UserVenue" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -128,6 +263,42 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <EntitySet Name="UserEnts" EntityType="EventrModel.UserEnt" />
           <EntitySet Name="UserVenueEnts" EntityType="EventrModel.UserVenueEnt" />
           <EntitySet Name="VenueEnts" EntityType="EventrModel.VenueEnt" />
+          <AssociationSet Name="FK__BookingAd__Addit__48CFD27E" Association="EventrModel.FK__BookingAd__Addit__48CFD27E">
+            <End Role="AdditionalServiceEnt" EntitySet="AdditionalServiceEnts" />
+            <End Role="BookingAdditionalServiceEnt" EntitySet="BookingAdditionalServiceEnts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Booking__EventBr__412EB0B6" Association="EventrModel.FK__Booking__EventBr__412EB0B6">
+            <End Role="UserEnt" EntitySet="UserEnts" />
+            <End Role="BookingEnt" EntitySet="BookingEnts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Booking__EventCa__4316F928" Association="EventrModel.FK__Booking__EventCa__4316F928">
+            <End Role="EventCategoryEnt" EntitySet="EventCategoryEnts" />
+            <End Role="BookingEnt" EntitySet="BookingEnts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Booking__VenueId__4222D4EF" Association="EventrModel.FK__Booking__VenueId__4222D4EF">
+            <End Role="VenueEnt" EntitySet="VenueEnts" />
+            <End Role="BookingEnt" EntitySet="BookingEnts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BookingAd__Booki__47DBAE45" Association="EventrModel.FK__BookingAd__Booki__47DBAE45">
+            <End Role="BookingEnt" EntitySet="BookingEnts" />
+            <End Role="BookingAdditionalServiceEnt" EntitySet="BookingAdditionalServiceEnts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ServiceTy__Event__38996AB5" Association="EventrModel.FK__ServiceTy__Event__38996AB5">
+            <End Role="EventCategoryEnt" EntitySet="EventCategoryEnts" />
+            <End Role="ServiceTypeEventCategoryEnt" EntitySet="ServiceTypeEventCategoryEnts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ServiceTy__Event__37A5467C" Association="EventrModel.FK__ServiceTy__Event__37A5467C">
+            <End Role="ServiceTypeEnt" EntitySet="ServiceTypeEnts" />
+            <End Role="ServiceTypeEventCategoryEnt" EntitySet="ServiceTypeEventCategoryEnts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserVenue__UserI__2A4B4B5E" Association="EventrModel.FK__UserVenue__UserI__2A4B4B5E">
+            <End Role="UserEnt" EntitySet="UserEnts" />
+            <End Role="UserVenueEnt" EntitySet="UserVenueEnts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserVenue__Venue__2B3F6F97" Association="EventrModel.FK__UserVenue__Venue__2B3F6F97">
+            <End Role="VenueEnt" EntitySet="VenueEnts" />
+            <End Role="UserVenueEnt" EntitySet="UserVenueEnts" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="AdditionalServiceEnt">
           <Key>
@@ -139,6 +310,7 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <Property Name="endDate" Type="DateTime" Precision="3" />
           <Property Name="startTime" Type="Time" Precision="7" />
           <Property Name="endTime" Type="Time" Precision="7" />
+          <NavigationProperty Name="BookingAdditionalServices" Relationship="EventrModel.FK__BookingAd__Addit__48CFD27E" FromRole="AdditionalServiceEnt" ToRole="BookingAdditionalServiceEnt" />
         </EntityType>
         <EntityType Name="BookingEnt">
           <Key>
@@ -152,14 +324,22 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <Property Name="BookingTimeTo" Type="DateTime" Precision="3" />
           <Property Name="Pax" Type="Int32" />
           <Property Name="EventBriteID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="User" Relationship="EventrModel.FK__Booking__EventBr__412EB0B6" FromRole="BookingEnt" ToRole="UserEnt" />
+          <NavigationProperty Name="EventCategory" Relationship="EventrModel.FK__Booking__EventCa__4316F928" FromRole="BookingEnt" ToRole="EventCategoryEnt" />
+          <NavigationProperty Name="Venue" Relationship="EventrModel.FK__Booking__VenueId__4222D4EF" FromRole="BookingEnt" ToRole="VenueEnt" />
+          <NavigationProperty Name="BookingAdditionalServices" Relationship="EventrModel.FK__BookingAd__Booki__47DBAE45" FromRole="BookingEnt" ToRole="BookingAdditionalServiceEnt" />
         </EntityType>
         <EntityType Name="BookingAdditionalServiceEnt">
           <Key>
             <PropertyRef Name="ID" />
+            <PropertyRef Name="Id" />
           </Key>
           <Property Name="ID" Type="Guid" Nullable="false" />
           <Property Name="BookingID" Type="Guid" />
           <Property Name="AdditionalServiceID" Type="Guid" />
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="AdditionalService" Relationship="EventrModel.FK__BookingAd__Addit__48CFD27E" FromRole="BookingAdditionalServiceEnt" ToRole="AdditionalServiceEnt" />
+          <NavigationProperty Name="Booking" Relationship="EventrModel.FK__BookingAd__Booki__47DBAE45" FromRole="BookingAdditionalServiceEnt" ToRole="BookingEnt" />
         </EntityType>
         <EntityType Name="EventCategoryEnt">
           <Key>
@@ -167,6 +347,8 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Bookings" Relationship="EventrModel.FK__Booking__EventCa__4316F928" FromRole="EventCategoryEnt" ToRole="BookingEnt" />
+          <NavigationProperty Name="ServiceTypeEventCategories" Relationship="EventrModel.FK__ServiceTy__Event__38996AB5" FromRole="EventCategoryEnt" ToRole="ServiceTypeEventCategoryEnt" />
         </EntityType>
         <EntityType Name="ServiceTypeEnt">
           <Key>
@@ -174,6 +356,7 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ServiceTypeEventCategories" Relationship="EventrModel.FK__ServiceTy__Event__37A5467C" FromRole="ServiceTypeEnt" ToRole="ServiceTypeEventCategoryEnt" />
         </EntityType>
         <EntityType Name="ServiceTypeEventCategoryEnt">
           <Key>
@@ -182,6 +365,8 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="ServiceTypeId" Type="Guid" />
           <Property Name="EventCategoryId" Type="Guid" />
+          <NavigationProperty Name="EventCategory" Relationship="EventrModel.FK__ServiceTy__Event__38996AB5" FromRole="ServiceTypeEventCategoryEnt" ToRole="EventCategoryEnt" />
+          <NavigationProperty Name="ServiceType" Relationship="EventrModel.FK__ServiceTy__Event__37A5467C" FromRole="ServiceTypeEventCategoryEnt" ToRole="ServiceTypeEnt" />
         </EntityType>
         <EntityType Name="UserEnt">
           <Key>
@@ -192,6 +377,8 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <Property Name="lastName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="token" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Bookings" Relationship="EventrModel.FK__Booking__EventBr__412EB0B6" FromRole="UserEnt" ToRole="BookingEnt" />
+          <NavigationProperty Name="UserVenues" Relationship="EventrModel.FK__UserVenue__UserI__2A4B4B5E" FromRole="UserEnt" ToRole="UserVenueEnt" />
         </EntityType>
         <EntityType Name="UserVenueEnt">
           <Key>
@@ -200,6 +387,8 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="UserId" Type="Guid" />
           <Property Name="VenueId" Type="Guid" />
+          <NavigationProperty Name="User" Relationship="EventrModel.FK__UserVenue__UserI__2A4B4B5E" FromRole="UserVenueEnt" ToRole="UserEnt" />
+          <NavigationProperty Name="Venue" Relationship="EventrModel.FK__UserVenue__Venue__2B3F6F97" FromRole="UserVenueEnt" ToRole="VenueEnt" />
         </EntityType>
         <EntityType Name="VenueEnt">
           <Key>
@@ -217,7 +406,117 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <Property Name="IsFullDay" Type="Boolean" />
           <Property Name="IsSupportWeekDay" Type="Boolean" />
           <Property Name="IsSupportWeekEnd" Type="Boolean" />
+          <NavigationProperty Name="Bookings" Relationship="EventrModel.FK__Booking__VenueId__4222D4EF" FromRole="VenueEnt" ToRole="BookingEnt" />
+          <NavigationProperty Name="UserVenues" Relationship="EventrModel.FK__UserVenue__Venue__2B3F6F97" FromRole="VenueEnt" ToRole="UserVenueEnt" />
         </EntityType>
+        <Association Name="FK__BookingAd__Addit__48CFD27E">
+          <End Type="EventrModel.AdditionalServiceEnt" Role="AdditionalServiceEnt" Multiplicity="0..1" />
+          <End Type="EventrModel.BookingAdditionalServiceEnt" Role="BookingAdditionalServiceEnt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AdditionalServiceEnt">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingAdditionalServiceEnt">
+              <PropertyRef Name="AdditionalServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Booking__EventBr__412EB0B6">
+          <End Type="EventrModel.UserEnt" Role="UserEnt" Multiplicity="0..1" />
+          <End Type="EventrModel.BookingEnt" Role="BookingEnt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserEnt">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingEnt">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Booking__EventCa__4316F928">
+          <End Type="EventrModel.EventCategoryEnt" Role="EventCategoryEnt" Multiplicity="0..1" />
+          <End Type="EventrModel.BookingEnt" Role="BookingEnt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventCategoryEnt">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingEnt">
+              <PropertyRef Name="EventCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Booking__VenueId__4222D4EF">
+          <End Type="EventrModel.VenueEnt" Role="VenueEnt" Multiplicity="0..1" />
+          <End Type="EventrModel.BookingEnt" Role="BookingEnt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VenueEnt">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingEnt">
+              <PropertyRef Name="VenueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BookingAd__Booki__47DBAE45">
+          <End Type="EventrModel.BookingEnt" Role="BookingEnt" Multiplicity="0..1" />
+          <End Type="EventrModel.BookingAdditionalServiceEnt" Role="BookingAdditionalServiceEnt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BookingEnt">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BookingAdditionalServiceEnt">
+              <PropertyRef Name="BookingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ServiceTy__Event__38996AB5">
+          <End Type="EventrModel.EventCategoryEnt" Role="EventCategoryEnt" Multiplicity="0..1" />
+          <End Type="EventrModel.ServiceTypeEventCategoryEnt" Role="ServiceTypeEventCategoryEnt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EventCategoryEnt">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceTypeEventCategoryEnt">
+              <PropertyRef Name="EventCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ServiceTy__Event__37A5467C">
+          <End Type="EventrModel.ServiceTypeEnt" Role="ServiceTypeEnt" Multiplicity="0..1" />
+          <End Type="EventrModel.ServiceTypeEventCategoryEnt" Role="ServiceTypeEventCategoryEnt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceTypeEnt">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ServiceTypeEventCategoryEnt">
+              <PropertyRef Name="ServiceTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserVenue__UserI__2A4B4B5E">
+          <End Type="EventrModel.UserEnt" Role="UserEnt" Multiplicity="0..1" />
+          <End Type="EventrModel.UserVenueEnt" Role="UserVenueEnt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserEnt">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserVenueEnt">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserVenue__Venue__2B3F6F97">
+          <End Type="EventrModel.VenueEnt" Role="VenueEnt" Multiplicity="0..1" />
+          <End Type="EventrModel.UserVenueEnt" Role="UserVenueEnt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VenueEnt">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserVenueEnt">
+              <PropertyRef Name="VenueId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -253,9 +552,9 @@ warning 6013: The table/view 'Eventr.dbo.Media' does not have a primary key defi
           <EntitySetMapping Name="BookingAdditionalServiceEnts">
             <EntityTypeMapping TypeName="EventrModel.BookingAdditionalServiceEnt">
               <MappingFragment StoreEntitySet="BookingAdditionalService">
+                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="AdditionalServiceID" ColumnName="AdditionalServiceID" />
                 <ScalarProperty Name="BookingID" ColumnName="BookingID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
