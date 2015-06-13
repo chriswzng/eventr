@@ -10,23 +10,23 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="ServiceTypeID" Type="uniqueidentifier" />
-          <Property Name="startDate" Type="datetime" />
-          <Property Name="endDate" Type="datetime" />
-          <Property Name="startTime" Type="time" Precision="7" />
-          <Property Name="endTime" Type="time" Precision="7" />
+          <Property Name="ServiceTypeID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="startDate" Type="datetime" Nullable="false" />
+          <Property Name="endDate" Type="datetime" Nullable="false" />
+          <Property Name="startTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="endTime" Type="time" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="Booking">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="VenueId" Type="uniqueidentifier" />
-          <Property Name="EventCategoryId" Type="uniqueidentifier" />
-          <Property Name="BookingTimeFrom" Type="datetime" />
-          <Property Name="BookingTimeTo" Type="datetime" />
-          <Property Name="Pax" Type="int" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="VenueId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EventCategoryId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="BookingTimeFrom" Type="datetime" Nullable="false" />
+          <Property Name="BookingTimeTo" Type="datetime" Nullable="false" />
+          <Property Name="Pax" Type="int" Nullable="false" />
           <Property Name="EventBriteID" Type="varchar" MaxLength="1" />
         </EntityType>
         <EntityType Name="BookingAdditionalService">
@@ -34,15 +34,15 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="BookingID" Type="uniqueidentifier" />
-          <Property Name="AdditionalServiceID" Type="uniqueidentifier" />
+          <Property Name="BookingID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AdditionalServiceID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityType Name="EventCategory">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="300" />
+          <Property Name="Name" Type="nvarchar" MaxLength="300" Nullable="false" />
         </EntityType>
         <EntityType Name="Media">
           <Key>
@@ -51,61 +51,61 @@
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
           <Property Name="VenueId" Type="uniqueidentifier" />
           <Property Name="AdditionalServiceId" Type="uniqueidentifier" />
-          <Property Name="mediaFileName" Type="nvarchar" MaxLength="300" />
-          <Property Name="filePath" Type="nvarchar(max)" />
+          <Property Name="mediaFileName" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="filePath" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="ServiceType">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="300" />
+          <Property Name="Name" Type="nvarchar" MaxLength="300" Nullable="false" />
         </EntityType>
         <EntityType Name="ServiceTypeEventCategory">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="ServiceTypeId" Type="uniqueidentifier" />
-          <Property Name="EventCategoryId" Type="uniqueidentifier" />
+          <Property Name="ServiceTypeId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EventCategoryId" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="firstName" Type="nvarchar" MaxLength="200" />
-          <Property Name="lastName" Type="nvarchar" MaxLength="200" />
-          <Property Name="email" Type="nvarchar" MaxLength="500" />
-          <Property Name="token" Type="varchar" MaxLength="50" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="token" Type="varchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="UserVenue">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="UserId" Type="uniqueidentifier" />
-          <Property Name="VenueId" Type="uniqueidentifier" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="VenueId" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <EntityType Name="Venue">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
-          <Property Name="Location" Type="nvarchar" MaxLength="300" />
-          <Property Name="MinPax" Type="int" />
-          <Property Name="MaxPax" Type="int" />
-          <Property Name="Cost" Type="decimal" Precision="18" Scale="0" />
-          <Property Name="startDate" Type="datetime" />
-          <Property Name="endDate" Type="datetime" />
-          <Property Name="startTime" Type="time" Precision="7" />
-          <Property Name="endTime" Type="time" Precision="7" />
-          <Property Name="IsFullDay" Type="bit" />
-          <Property Name="IsSupportWeekDay" Type="bit" />
-          <Property Name="IsSupportWeekEnd" Type="bit" />
+          <Property Name="Location" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="MinPax" Type="int" Nullable="false" />
+          <Property Name="MaxPax" Type="int" Nullable="false" />
+          <Property Name="Cost" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="startDate" Type="datetime" Nullable="false" />
+          <Property Name="endDate" Type="datetime" Nullable="false" />
+          <Property Name="startTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="endTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="IsFullDay" Type="bit" Nullable="false" />
+          <Property Name="IsSupportWeekDay" Type="bit" Nullable="false" />
+          <Property Name="IsSupportWeekEnd" Type="bit" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Booking__EventBr__412EB0B6">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+        <Association Name="FK__Booking__EventBr__22751F6C">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
           <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
@@ -116,8 +116,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Booking__EventCa__4316F928">
-          <End Role="EventCategory" Type="Self.EventCategory" Multiplicity="0..1" />
+        <Association Name="FK__Booking__EventCa__245D67DE">
+          <End Role="EventCategory" Type="Self.EventCategory" Multiplicity="1" />
           <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="EventCategory">
@@ -128,8 +128,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Booking__VenueId__4222D4EF">
-          <End Role="Venue" Type="Self.Venue" Multiplicity="0..1" />
+        <Association Name="FK__Booking__VenueId__236943A5">
+          <End Role="Venue" Type="Self.Venue" Multiplicity="1" />
           <End Role="Booking" Type="Self.Booking" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Venue">
@@ -140,8 +140,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BookingAd__Addit__48CFD27E">
-          <End Role="AdditionalService" Type="Self.AdditionalService" Multiplicity="0..1" />
+        <Association Name="FK__BookingAd__Addit__2A164134">
+          <End Role="AdditionalService" Type="Self.AdditionalService" Multiplicity="1" />
           <End Role="BookingAdditionalService" Type="Self.BookingAdditionalService" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdditionalService">
@@ -152,8 +152,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BookingAd__Booki__47DBAE45">
-          <End Role="Booking" Type="Self.Booking" Multiplicity="0..1" />
+        <Association Name="FK__BookingAd__Booki__29221CFB">
+          <End Role="Booking" Type="Self.Booking" Multiplicity="1" />
           <End Role="BookingAdditionalService" Type="Self.BookingAdditionalService" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Booking">
@@ -164,7 +164,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Media__Additiona__4E88ABD4">
+        <Association Name="FK__Media__Additiona__2FCF1A8A">
           <End Role="AdditionalService" Type="Self.AdditionalService" Multiplicity="0..1" />
           <End Role="Media" Type="Self.Media" Multiplicity="*" />
           <ReferentialConstraint>
@@ -176,7 +176,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Media__VenueId__4D94879B">
+        <Association Name="FK__Media__VenueId__2EDAF651">
           <End Role="Venue" Type="Self.Venue" Multiplicity="0..1" />
           <End Role="Media" Type="Self.Media" Multiplicity="*" />
           <ReferentialConstraint>
@@ -188,8 +188,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ServiceTy__Event__37A5467C">
-          <End Role="ServiceType" Type="Self.ServiceType" Multiplicity="0..1" />
+        <Association Name="FK__ServiceTy__Event__18EBB532">
+          <End Role="ServiceType" Type="Self.ServiceType" Multiplicity="1" />
           <End Role="ServiceTypeEventCategory" Type="Self.ServiceTypeEventCategory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServiceType">
@@ -200,8 +200,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ServiceTy__Event__38996AB5">
-          <End Role="EventCategory" Type="Self.EventCategory" Multiplicity="0..1" />
+        <Association Name="FK__ServiceTy__Event__19DFD96B">
+          <End Role="EventCategory" Type="Self.EventCategory" Multiplicity="1" />
           <End Role="ServiceTypeEventCategory" Type="Self.ServiceTypeEventCategory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="EventCategory">
@@ -212,8 +212,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__UserVenue__UserI__2A4B4B5E">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+        <Association Name="FK__UserVenue__UserI__0B91BA14">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
           <End Role="UserVenue" Type="Self.UserVenue" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
@@ -224,8 +224,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__UserVenue__Venue__2B3F6F97">
-          <End Role="Venue" Type="Self.Venue" Multiplicity="0..1" />
+        <Association Name="FK__UserVenue__Venue__0C85DE4D">
+          <End Role="Venue" Type="Self.Venue" Multiplicity="1" />
           <End Role="UserVenue" Type="Self.UserVenue" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Venue">
@@ -247,47 +247,47 @@
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserVenue" EntityType="Self.UserVenue" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Venue" EntityType="Self.Venue" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Booking__EventBr__412EB0B6" Association="Self.FK__Booking__EventBr__412EB0B6">
+          <AssociationSet Name="FK__Booking__EventBr__22751F6C" Association="Self.FK__Booking__EventBr__22751F6C">
             <End Role="User" EntitySet="User" />
             <End Role="Booking" EntitySet="Booking" />
           </AssociationSet>
-          <AssociationSet Name="FK__Booking__EventCa__4316F928" Association="Self.FK__Booking__EventCa__4316F928">
+          <AssociationSet Name="FK__Booking__EventCa__245D67DE" Association="Self.FK__Booking__EventCa__245D67DE">
             <End Role="EventCategory" EntitySet="EventCategory" />
             <End Role="Booking" EntitySet="Booking" />
           </AssociationSet>
-          <AssociationSet Name="FK__Booking__VenueId__4222D4EF" Association="Self.FK__Booking__VenueId__4222D4EF">
+          <AssociationSet Name="FK__Booking__VenueId__236943A5" Association="Self.FK__Booking__VenueId__236943A5">
             <End Role="Venue" EntitySet="Venue" />
             <End Role="Booking" EntitySet="Booking" />
           </AssociationSet>
-          <AssociationSet Name="FK__BookingAd__Addit__48CFD27E" Association="Self.FK__BookingAd__Addit__48CFD27E">
+          <AssociationSet Name="FK__BookingAd__Addit__2A164134" Association="Self.FK__BookingAd__Addit__2A164134">
             <End Role="AdditionalService" EntitySet="AdditionalService" />
             <End Role="BookingAdditionalService" EntitySet="BookingAdditionalService" />
           </AssociationSet>
-          <AssociationSet Name="FK__BookingAd__Booki__47DBAE45" Association="Self.FK__BookingAd__Booki__47DBAE45">
+          <AssociationSet Name="FK__BookingAd__Booki__29221CFB" Association="Self.FK__BookingAd__Booki__29221CFB">
             <End Role="Booking" EntitySet="Booking" />
             <End Role="BookingAdditionalService" EntitySet="BookingAdditionalService" />
           </AssociationSet>
-          <AssociationSet Name="FK__Media__Additiona__4E88ABD4" Association="Self.FK__Media__Additiona__4E88ABD4">
+          <AssociationSet Name="FK__Media__Additiona__2FCF1A8A" Association="Self.FK__Media__Additiona__2FCF1A8A">
             <End Role="AdditionalService" EntitySet="AdditionalService" />
             <End Role="Media" EntitySet="Media" />
           </AssociationSet>
-          <AssociationSet Name="FK__Media__VenueId__4D94879B" Association="Self.FK__Media__VenueId__4D94879B">
+          <AssociationSet Name="FK__Media__VenueId__2EDAF651" Association="Self.FK__Media__VenueId__2EDAF651">
             <End Role="Venue" EntitySet="Venue" />
             <End Role="Media" EntitySet="Media" />
           </AssociationSet>
-          <AssociationSet Name="FK__ServiceTy__Event__37A5467C" Association="Self.FK__ServiceTy__Event__37A5467C">
+          <AssociationSet Name="FK__ServiceTy__Event__18EBB532" Association="Self.FK__ServiceTy__Event__18EBB532">
             <End Role="ServiceType" EntitySet="ServiceType" />
             <End Role="ServiceTypeEventCategory" EntitySet="ServiceTypeEventCategory" />
           </AssociationSet>
-          <AssociationSet Name="FK__ServiceTy__Event__38996AB5" Association="Self.FK__ServiceTy__Event__38996AB5">
+          <AssociationSet Name="FK__ServiceTy__Event__19DFD96B" Association="Self.FK__ServiceTy__Event__19DFD96B">
             <End Role="EventCategory" EntitySet="EventCategory" />
             <End Role="ServiceTypeEventCategory" EntitySet="ServiceTypeEventCategory" />
           </AssociationSet>
-          <AssociationSet Name="FK__UserVenue__UserI__2A4B4B5E" Association="Self.FK__UserVenue__UserI__2A4B4B5E">
+          <AssociationSet Name="FK__UserVenue__UserI__0B91BA14" Association="Self.FK__UserVenue__UserI__0B91BA14">
             <End Role="User" EntitySet="User" />
             <End Role="UserVenue" EntitySet="UserVenue" />
           </AssociationSet>
-          <AssociationSet Name="FK__UserVenue__Venue__2B3F6F97" Association="Self.FK__UserVenue__Venue__2B3F6F97">
+          <AssociationSet Name="FK__UserVenue__Venue__0C85DE4D" Association="Self.FK__UserVenue__Venue__0C85DE4D">
             <End Role="Venue" EntitySet="Venue" />
             <End Role="UserVenue" EntitySet="UserVenue" />
           </AssociationSet>
@@ -302,49 +302,49 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="ServiceTypeID" Type="Guid" />
-          <Property Name="startDate" Type="DateTime" Precision="3" />
-          <Property Name="endDate" Type="DateTime" Precision="3" />
-          <Property Name="startTime" Type="Time" Precision="7" />
-          <Property Name="endTime" Type="Time" Precision="7" />
-          <NavigationProperty Name="BookingAdditionalServices" Relationship="Self.FK__BookingAd__Addit__48CFD27E" FromRole="AdditionalService" ToRole="BookingAdditionalService" />
-          <NavigationProperty Name="Media" Relationship="Self.FK__Media__Additiona__4E88ABD4" FromRole="AdditionalService" ToRole="Media" />
+          <Property Name="ServiceTypeID" Type="Guid" Nullable="false" />
+          <Property Name="startDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="endDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="startTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="endTime" Type="Time" Nullable="false" Precision="7" />
+          <NavigationProperty Name="BookingAdditionalServices" Relationship="Self.FK__BookingAd__Addit__2A164134" FromRole="AdditionalService" ToRole="BookingAdditionalService" />
+          <NavigationProperty Name="Media" Relationship="Self.FK__Media__Additiona__2FCF1A8A" FromRole="AdditionalService" ToRole="Media" />
         </EntityType>
         <EntityType Name="BookingEnt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="VenueId" Type="Guid" />
-          <Property Name="EventCategoryId" Type="Guid" />
-          <Property Name="BookingTimeFrom" Type="DateTime" Precision="3" />
-          <Property Name="BookingTimeTo" Type="DateTime" Precision="3" />
-          <Property Name="Pax" Type="Int32" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="VenueId" Type="Guid" Nullable="false" />
+          <Property Name="EventCategoryId" Type="Guid" Nullable="false" />
+          <Property Name="BookingTimeFrom" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BookingTimeTo" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Pax" Type="Int32" Nullable="false" />
           <Property Name="EventBriteID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="User" Relationship="Self.FK__Booking__EventBr__412EB0B6" FromRole="Booking" ToRole="User" />
-          <NavigationProperty Name="EventCategory" Relationship="Self.FK__Booking__EventCa__4316F928" FromRole="Booking" ToRole="EventCategory" />
-          <NavigationProperty Name="Venue" Relationship="Self.FK__Booking__VenueId__4222D4EF" FromRole="Booking" ToRole="Venue" />
-          <NavigationProperty Name="BookingAdditionalServices" Relationship="Self.FK__BookingAd__Booki__47DBAE45" FromRole="Booking" ToRole="BookingAdditionalService" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Booking__EventBr__22751F6C" FromRole="Booking" ToRole="User" />
+          <NavigationProperty Name="EventCategory" Relationship="Self.FK__Booking__EventCa__245D67DE" FromRole="Booking" ToRole="EventCategory" />
+          <NavigationProperty Name="Venue" Relationship="Self.FK__Booking__VenueId__236943A5" FromRole="Booking" ToRole="Venue" />
+          <NavigationProperty Name="BookingAdditionalServices" Relationship="Self.FK__BookingAd__Booki__29221CFB" FromRole="Booking" ToRole="BookingAdditionalService" />
         </EntityType>
         <EntityType Name="BookingAdditionalServiceEnt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="BookingID" Type="Guid" />
-          <Property Name="AdditionalServiceID" Type="Guid" />
-          <NavigationProperty Name="AdditionalService" Relationship="Self.FK__BookingAd__Addit__48CFD27E" FromRole="BookingAdditionalService" ToRole="AdditionalService" />
-          <NavigationProperty Name="Booking" Relationship="Self.FK__BookingAd__Booki__47DBAE45" FromRole="BookingAdditionalService" ToRole="Booking" />
+          <Property Name="BookingID" Type="Guid" Nullable="false" />
+          <Property Name="AdditionalServiceID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="AdditionalService" Relationship="Self.FK__BookingAd__Addit__2A164134" FromRole="BookingAdditionalService" ToRole="AdditionalService" />
+          <NavigationProperty Name="Booking" Relationship="Self.FK__BookingAd__Booki__29221CFB" FromRole="BookingAdditionalService" ToRole="Booking" />
         </EntityType>
         <EntityType Name="EventCategoryEnt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Bookings" Relationship="Self.FK__Booking__EventCa__4316F928" FromRole="EventCategory" ToRole="Booking" />
-          <NavigationProperty Name="ServiceTypeEventCategories" Relationship="Self.FK__ServiceTy__Event__38996AB5" FromRole="EventCategory" ToRole="ServiceTypeEventCategory" />
+          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Bookings" Relationship="Self.FK__Booking__EventCa__245D67DE" FromRole="EventCategory" ToRole="Booking" />
+          <NavigationProperty Name="ServiceTypeEventCategories" Relationship="Self.FK__ServiceTy__Event__19DFD96B" FromRole="EventCategory" ToRole="ServiceTypeEventCategory" />
         </EntityType>
         <EntityType Name="MediumEnt">
           <Key>
@@ -353,73 +353,73 @@
           <Property Name="Id" Type="Guid" Nullable="false" />
           <Property Name="VenueId" Type="Guid" />
           <Property Name="AdditionalServiceId" Type="Guid" />
-          <Property Name="mediaFileName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="filePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="AdditionalService" Relationship="Self.FK__Media__Additiona__4E88ABD4" FromRole="Media" ToRole="AdditionalService" />
-          <NavigationProperty Name="Venue" Relationship="Self.FK__Media__VenueId__4D94879B" FromRole="Media" ToRole="Venue" />
+          <Property Name="mediaFileName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="filePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AdditionalService" Relationship="Self.FK__Media__Additiona__2FCF1A8A" FromRole="Media" ToRole="AdditionalService" />
+          <NavigationProperty Name="Venue" Relationship="Self.FK__Media__VenueId__2EDAF651" FromRole="Media" ToRole="Venue" />
         </EntityType>
         <EntityType Name="ServiceTypeEnt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ServiceTypeEventCategories" Relationship="Self.FK__ServiceTy__Event__37A5467C" FromRole="ServiceType" ToRole="ServiceTypeEventCategory" />
+          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ServiceTypeEventCategories" Relationship="Self.FK__ServiceTy__Event__18EBB532" FromRole="ServiceType" ToRole="ServiceTypeEventCategory" />
         </EntityType>
         <EntityType Name="ServiceTypeEventCategoryEnt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="ServiceTypeId" Type="Guid" />
-          <Property Name="EventCategoryId" Type="Guid" />
-          <NavigationProperty Name="EventCategory" Relationship="Self.FK__ServiceTy__Event__38996AB5" FromRole="ServiceTypeEventCategory" ToRole="EventCategory" />
-          <NavigationProperty Name="ServiceType" Relationship="Self.FK__ServiceTy__Event__37A5467C" FromRole="ServiceTypeEventCategory" ToRole="ServiceType" />
+          <Property Name="ServiceTypeId" Type="Guid" Nullable="false" />
+          <Property Name="EventCategoryId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="EventCategory" Relationship="Self.FK__ServiceTy__Event__19DFD96B" FromRole="ServiceTypeEventCategory" ToRole="EventCategory" />
+          <NavigationProperty Name="ServiceType" Relationship="Self.FK__ServiceTy__Event__18EBB532" FromRole="ServiceTypeEventCategory" ToRole="ServiceType" />
         </EntityType>
         <EntityType Name="UserEnt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="firstName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="lastName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="token" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Bookings" Relationship="Self.FK__Booking__EventBr__412EB0B6" FromRole="User" ToRole="Booking" />
-          <NavigationProperty Name="UserVenues" Relationship="Self.FK__UserVenue__UserI__2A4B4B5E" FromRole="User" ToRole="UserVenue" />
+          <Property Name="firstName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="token" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Bookings" Relationship="Self.FK__Booking__EventBr__22751F6C" FromRole="User" ToRole="Booking" />
+          <NavigationProperty Name="UserVenues" Relationship="Self.FK__UserVenue__UserI__0B91BA14" FromRole="User" ToRole="UserVenue" />
         </EntityType>
         <EntityType Name="UserVenueEnt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="UserId" Type="Guid" />
-          <Property Name="VenueId" Type="Guid" />
-          <NavigationProperty Name="User" Relationship="Self.FK__UserVenue__UserI__2A4B4B5E" FromRole="UserVenue" ToRole="User" />
-          <NavigationProperty Name="Venue" Relationship="Self.FK__UserVenue__Venue__2B3F6F97" FromRole="UserVenue" ToRole="Venue" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="VenueId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK__UserVenue__UserI__0B91BA14" FromRole="UserVenue" ToRole="User" />
+          <NavigationProperty Name="Venue" Relationship="Self.FK__UserVenue__Venue__0C85DE4D" FromRole="UserVenue" ToRole="Venue" />
         </EntityType>
         <EntityType Name="VenueEnt">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" />
-          <Property Name="Location" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="MinPax" Type="Int32" />
-          <Property Name="MaxPax" Type="Int32" />
-          <Property Name="Cost" Type="Decimal" Precision="18" Scale="0" />
-          <Property Name="startDate" Type="DateTime" Precision="3" />
-          <Property Name="endDate" Type="DateTime" Precision="3" />
-          <Property Name="startTime" Type="Time" Precision="7" />
-          <Property Name="endTime" Type="Time" Precision="7" />
-          <Property Name="IsFullDay" Type="Boolean" />
-          <Property Name="IsSupportWeekDay" Type="Boolean" />
-          <Property Name="IsSupportWeekEnd" Type="Boolean" />
-          <NavigationProperty Name="Bookings" Relationship="Self.FK__Booking__VenueId__4222D4EF" FromRole="Venue" ToRole="Booking" />
-          <NavigationProperty Name="Media" Relationship="Self.FK__Media__VenueId__4D94879B" FromRole="Venue" ToRole="Media" />
-          <NavigationProperty Name="UserVenues" Relationship="Self.FK__UserVenue__Venue__2B3F6F97" FromRole="Venue" ToRole="UserVenue" />
+          <Property Name="Location" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MinPax" Type="Int32" Nullable="false" />
+          <Property Name="MaxPax" Type="Int32" Nullable="false" />
+          <Property Name="Cost" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="startDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="endDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="startTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="endTime" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="IsFullDay" Type="Boolean" Nullable="false" />
+          <Property Name="IsSupportWeekDay" Type="Boolean" Nullable="false" />
+          <Property Name="IsSupportWeekEnd" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Bookings" Relationship="Self.FK__Booking__VenueId__236943A5" FromRole="Venue" ToRole="Booking" />
+          <NavigationProperty Name="Media" Relationship="Self.FK__Media__VenueId__2EDAF651" FromRole="Venue" ToRole="Media" />
+          <NavigationProperty Name="UserVenues" Relationship="Self.FK__UserVenue__Venue__0C85DE4D" FromRole="Venue" ToRole="UserVenue" />
         </EntityType>
-        <Association Name="FK__BookingAd__Addit__48CFD27E">
-          <End Role="AdditionalService" Type="EventrModel.AdditionalServiceEnt" Multiplicity="0..1" />
+        <Association Name="FK__BookingAd__Addit__2A164134">
+          <End Role="AdditionalService" Type="EventrModel.AdditionalServiceEnt" Multiplicity="1" />
           <End Role="BookingAdditionalService" Type="EventrModel.BookingAdditionalServiceEnt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="AdditionalService">
@@ -430,7 +430,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Media__Additiona__4E88ABD4">
+        <Association Name="FK__Media__Additiona__2FCF1A8A">
           <End Role="AdditionalService" Type="EventrModel.AdditionalServiceEnt" Multiplicity="0..1" />
           <End Role="Media" Type="EventrModel.MediumEnt" Multiplicity="*" />
           <ReferentialConstraint>
@@ -442,8 +442,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Booking__EventBr__412EB0B6">
-          <End Role="User" Type="EventrModel.UserEnt" Multiplicity="0..1" />
+        <Association Name="FK__Booking__EventBr__22751F6C">
+          <End Role="User" Type="EventrModel.UserEnt" Multiplicity="1" />
           <End Role="Booking" Type="EventrModel.BookingEnt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
@@ -454,8 +454,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Booking__EventCa__4316F928">
-          <End Role="EventCategory" Type="EventrModel.EventCategoryEnt" Multiplicity="0..1" />
+        <Association Name="FK__Booking__EventCa__245D67DE">
+          <End Role="EventCategory" Type="EventrModel.EventCategoryEnt" Multiplicity="1" />
           <End Role="Booking" Type="EventrModel.BookingEnt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="EventCategory">
@@ -466,8 +466,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Booking__VenueId__4222D4EF">
-          <End Role="Venue" Type="EventrModel.VenueEnt" Multiplicity="0..1" />
+        <Association Name="FK__Booking__VenueId__236943A5">
+          <End Role="Venue" Type="EventrModel.VenueEnt" Multiplicity="1" />
           <End Role="Booking" Type="EventrModel.BookingEnt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Venue">
@@ -478,8 +478,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__BookingAd__Booki__47DBAE45">
-          <End Role="Booking" Type="EventrModel.BookingEnt" Multiplicity="0..1" />
+        <Association Name="FK__BookingAd__Booki__29221CFB">
+          <End Role="Booking" Type="EventrModel.BookingEnt" Multiplicity="1" />
           <End Role="BookingAdditionalService" Type="EventrModel.BookingAdditionalServiceEnt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Booking">
@@ -490,8 +490,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ServiceTy__Event__38996AB5">
-          <End Role="EventCategory" Type="EventrModel.EventCategoryEnt" Multiplicity="0..1" />
+        <Association Name="FK__ServiceTy__Event__19DFD96B">
+          <End Role="EventCategory" Type="EventrModel.EventCategoryEnt" Multiplicity="1" />
           <End Role="ServiceTypeEventCategory" Type="EventrModel.ServiceTypeEventCategoryEnt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="EventCategory">
@@ -502,7 +502,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Media__VenueId__4D94879B">
+        <Association Name="FK__Media__VenueId__2EDAF651">
           <End Role="Venue" Type="EventrModel.VenueEnt" Multiplicity="0..1" />
           <End Role="Media" Type="EventrModel.MediumEnt" Multiplicity="*" />
           <ReferentialConstraint>
@@ -514,8 +514,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__ServiceTy__Event__37A5467C">
-          <End Role="ServiceType" Type="EventrModel.ServiceTypeEnt" Multiplicity="0..1" />
+        <Association Name="FK__ServiceTy__Event__18EBB532">
+          <End Role="ServiceType" Type="EventrModel.ServiceTypeEnt" Multiplicity="1" />
           <End Role="ServiceTypeEventCategory" Type="EventrModel.ServiceTypeEventCategoryEnt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ServiceType">
@@ -526,8 +526,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__UserVenue__UserI__2A4B4B5E">
-          <End Role="User" Type="EventrModel.UserEnt" Multiplicity="0..1" />
+        <Association Name="FK__UserVenue__UserI__0B91BA14">
+          <End Role="User" Type="EventrModel.UserEnt" Multiplicity="1" />
           <End Role="UserVenue" Type="EventrModel.UserVenueEnt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
@@ -538,8 +538,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__UserVenue__Venue__2B3F6F97">
-          <End Role="Venue" Type="EventrModel.VenueEnt" Multiplicity="0..1" />
+        <Association Name="FK__UserVenue__Venue__0C85DE4D">
+          <End Role="Venue" Type="EventrModel.VenueEnt" Multiplicity="1" />
           <End Role="UserVenue" Type="EventrModel.UserVenueEnt" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Venue">
@@ -550,7 +550,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EventrEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EventrAPIEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AdditionalServiceEnts" EntityType="EventrModel.AdditionalServiceEnt" />
           <EntitySet Name="BookingEnts" EntityType="EventrModel.BookingEnt" />
           <EntitySet Name="BookingAdditionalServiceEnts" EntityType="EventrModel.BookingAdditionalServiceEnt" />
@@ -561,47 +561,47 @@
           <EntitySet Name="UserEnts" EntityType="EventrModel.UserEnt" />
           <EntitySet Name="UserVenueEnts" EntityType="EventrModel.UserVenueEnt" />
           <EntitySet Name="VenueEnts" EntityType="EventrModel.VenueEnt" />
-          <AssociationSet Name="FK__BookingAd__Addit__48CFD27E" Association="Self.FK__BookingAd__Addit__48CFD27E">
+          <AssociationSet Name="FK__BookingAd__Addit__2A164134" Association="Self.FK__BookingAd__Addit__2A164134">
             <End Role="AdditionalService" EntitySet="AdditionalServiceEnts" />
             <End Role="BookingAdditionalService" EntitySet="BookingAdditionalServiceEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__Media__Additiona__4E88ABD4" Association="Self.FK__Media__Additiona__4E88ABD4">
+          <AssociationSet Name="FK__Media__Additiona__2FCF1A8A" Association="Self.FK__Media__Additiona__2FCF1A8A">
             <End Role="AdditionalService" EntitySet="AdditionalServiceEnts" />
             <End Role="Media" EntitySet="MediumEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__Booking__EventBr__412EB0B6" Association="Self.FK__Booking__EventBr__412EB0B6">
+          <AssociationSet Name="FK__Booking__EventBr__22751F6C" Association="Self.FK__Booking__EventBr__22751F6C">
             <End Role="User" EntitySet="UserEnts" />
             <End Role="Booking" EntitySet="BookingEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__Booking__EventCa__4316F928" Association="Self.FK__Booking__EventCa__4316F928">
+          <AssociationSet Name="FK__Booking__EventCa__245D67DE" Association="Self.FK__Booking__EventCa__245D67DE">
             <End Role="EventCategory" EntitySet="EventCategoryEnts" />
             <End Role="Booking" EntitySet="BookingEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__Booking__VenueId__4222D4EF" Association="Self.FK__Booking__VenueId__4222D4EF">
+          <AssociationSet Name="FK__Booking__VenueId__236943A5" Association="Self.FK__Booking__VenueId__236943A5">
             <End Role="Venue" EntitySet="VenueEnts" />
             <End Role="Booking" EntitySet="BookingEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__BookingAd__Booki__47DBAE45" Association="Self.FK__BookingAd__Booki__47DBAE45">
+          <AssociationSet Name="FK__BookingAd__Booki__29221CFB" Association="Self.FK__BookingAd__Booki__29221CFB">
             <End Role="Booking" EntitySet="BookingEnts" />
             <End Role="BookingAdditionalService" EntitySet="BookingAdditionalServiceEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__ServiceTy__Event__38996AB5" Association="Self.FK__ServiceTy__Event__38996AB5">
+          <AssociationSet Name="FK__ServiceTy__Event__19DFD96B" Association="Self.FK__ServiceTy__Event__19DFD96B">
             <End Role="EventCategory" EntitySet="EventCategoryEnts" />
             <End Role="ServiceTypeEventCategory" EntitySet="ServiceTypeEventCategoryEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__Media__VenueId__4D94879B" Association="Self.FK__Media__VenueId__4D94879B">
+          <AssociationSet Name="FK__Media__VenueId__2EDAF651" Association="Self.FK__Media__VenueId__2EDAF651">
             <End Role="Venue" EntitySet="VenueEnts" />
             <End Role="Media" EntitySet="MediumEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__ServiceTy__Event__37A5467C" Association="Self.FK__ServiceTy__Event__37A5467C">
+          <AssociationSet Name="FK__ServiceTy__Event__18EBB532" Association="Self.FK__ServiceTy__Event__18EBB532">
             <End Role="ServiceType" EntitySet="ServiceTypeEnts" />
             <End Role="ServiceTypeEventCategory" EntitySet="ServiceTypeEventCategoryEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__UserVenue__UserI__2A4B4B5E" Association="Self.FK__UserVenue__UserI__2A4B4B5E">
+          <AssociationSet Name="FK__UserVenue__UserI__0B91BA14" Association="Self.FK__UserVenue__UserI__0B91BA14">
             <End Role="User" EntitySet="UserEnts" />
             <End Role="UserVenue" EntitySet="UserVenueEnts" />
           </AssociationSet>
-          <AssociationSet Name="FK__UserVenue__Venue__2B3F6F97" Association="Self.FK__UserVenue__Venue__2B3F6F97">
+          <AssociationSet Name="FK__UserVenue__Venue__0C85DE4D" Association="Self.FK__UserVenue__Venue__0C85DE4D">
             <End Role="Venue" EntitySet="VenueEnts" />
             <End Role="UserVenue" EntitySet="UserVenueEnts" />
           </AssociationSet>
@@ -611,7 +611,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EventrModelStoreContainer" CdmEntityContainer="EventrEntities">
+        <EntityContainerMapping StorageEntityContainer="EventrModelStoreContainer" CdmEntityContainer="EventrAPIEntities1">
           <EntitySetMapping Name="AdditionalServiceEnts">
             <EntityTypeMapping TypeName="EventrModel.AdditionalServiceEnt">
               <MappingFragment StoreEntitySet="AdditionalService">

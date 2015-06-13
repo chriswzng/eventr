@@ -23,16 +23,16 @@ namespace Eventr.API.Models
     
         public System.Guid Id { get; set; }
         public string Location { get; set; }
-        public Nullable<int> MinPax { get; set; }
-        public Nullable<int> MaxPax { get; set; }
-        public Nullable<decimal> Cost { get; set; }
-        public Nullable<System.DateTime> startDate { get; set; }
-        public Nullable<System.DateTime> endDate { get; set; }
-        public Nullable<System.TimeSpan> startTime { get; set; }
-        public Nullable<System.TimeSpan> endTime { get; set; }
-        public Nullable<bool> IsFullDay { get; set; }
-        public Nullable<bool> IsSupportWeekDay { get; set; }
-        public Nullable<bool> IsSupportWeekEnd { get; set; }
+        public int MinPax { get; set; }
+        public int MaxPax { get; set; }
+        public decimal Cost { get; set; }
+        public System.DateTime startDate { get; set; }
+        public System.DateTime endDate { get; set; }
+        public System.TimeSpan startTime { get; set; }
+        public System.TimeSpan endTime { get; set; }
+        public bool IsFullDay { get; set; }
+        public bool IsSupportWeekDay { get; set; }
+        public bool IsSupportWeekEnd { get; set; }
     
         public virtual ICollection<BookingEnt> Bookings { get; set; }
         public virtual ICollection<MediumEnt> Media { get; set; }

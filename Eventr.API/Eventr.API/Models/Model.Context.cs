@@ -13,10 +13,10 @@ namespace Eventr.API.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EventrEntities : DbContext
+    public partial class EventrAPIEntities1 : DbContext
     {
-        public EventrEntities()
-            : base("name=EventrEntities")
+        public EventrAPIEntities1()
+            : base("name=EventrAPIEntities1")
         {
         }
     

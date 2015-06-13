@@ -20,12 +20,12 @@ namespace Eventr.API.Models
         }
     
         public System.Guid Id { get; set; }
-        public Nullable<System.Guid> UserId { get; set; }
-        public Nullable<System.Guid> VenueId { get; set; }
-        public Nullable<System.Guid> EventCategoryId { get; set; }
-        public Nullable<System.DateTime> BookingTimeFrom { get; set; }
-        public Nullable<System.DateTime> BookingTimeTo { get; set; }
-        public Nullable<int> Pax { get; set; }
+        public System.Guid UserId { get; set; }
+        public System.Guid VenueId { get; set; }
+        public System.Guid EventCategoryId { get; set; }
+        public System.DateTime BookingTimeFrom { get; set; }
+        public System.DateTime BookingTimeTo { get; set; }
+        public int Pax { get; set; }
         public string EventBriteID { get; set; }
     
         public virtual UserEnt User { get; set; }

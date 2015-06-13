@@ -15,8 +15,8 @@ namespace Eventr.API.Models
     public partial class ServiceTypeEventCategoryEnt
     {
         public System.Guid Id { get; set; }
-        public Nullable<System.Guid> ServiceTypeId { get; set; }
-        public Nullable<System.Guid> EventCategoryId { get; set; }
+        public System.Guid ServiceTypeId { get; set; }
+        public System.Guid EventCategoryId { get; set; }
     
         public virtual EventCategoryEnt EventCategory { get; set; }
         public virtual ServiceTypeEnt ServiceType { get; set; }

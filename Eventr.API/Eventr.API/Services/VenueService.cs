@@ -1,4 +1,5 @@
-﻿using Eventr.API.Models;
+﻿using Eventr.API.Contracts;
+using Eventr.API.Models;
 using Eventr.API.Repositories;
 using System;
 using System.Collections.Generic;
@@ -10,17 +11,31 @@ namespace Eventr.API.Services
 {
     public class VenueService
     {
-        internal IEnumerable<object> GetVenues()
+        internal IEnumerable<Venue> GetVenues()
         {
             VenueRepository venueRepository = new VenueRepository();
             List<VenueEnt> venueEnts = venueRepository.GetVenues();
-            return ConvertToContract(venueEnts);
+          
+
+
+            //foreach(VenueEnt venueEnt in venueEnts)
+            //{
+
+            //}
+
         }
 
-        private IEnumerable<object> ConvertToContract(IEnumerable<VenueEnt> venues)
-        {
-            throw new NotImplementedException();
-        }
+        private IEnumerable<object> 
+
+
+        //private Venue ConvertToContract(VenueEnt venueEnt)
+        //{
+        //    Venue venue = new Venue();
+        //    venue.Cost = venueEnt.Cost;
+        //    venue.EndDate = venueEnt.endDate;  
+          
+        //    return venue;
+        //}
 
         private object ConvertToContract(object venue)
         {

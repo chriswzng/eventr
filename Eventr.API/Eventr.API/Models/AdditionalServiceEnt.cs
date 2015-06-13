@@ -21,11 +21,11 @@ namespace Eventr.API.Models
         }
     
         public System.Guid Id { get; set; }
-        public Nullable<System.Guid> ServiceTypeID { get; set; }
-        public Nullable<System.DateTime> startDate { get; set; }
-        public Nullable<System.DateTime> endDate { get; set; }
-        public Nullable<System.TimeSpan> startTime { get; set; }
-        public Nullable<System.TimeSpan> endTime { get; set; }
+        public System.Guid ServiceTypeID { get; set; }
+        public System.DateTime startDate { get; set; }
+        public System.DateTime endDate { get; set; }
+        public System.TimeSpan startTime { get; set; }
+        public System.TimeSpan endTime { get; set; }
     
         public virtual ICollection<BookingAdditionalServiceEnt> BookingAdditionalServices { get; set; }
         public virtual ICollection<MediumEnt> Media { get; set; }
