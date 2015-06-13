@@ -3,6 +3,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <script>
+        $(function () {
+            $("#datepickerFrom").datepicker();
+            $("#datepickerTo").datepicker();
+            $("#timepickerFrom").timepicker();
+            $("#timepickerTo").timepicker();
+        });
+    </script>
+
     <h1>Create an Event Service</h1>
     What Type of Service do you Provide?
     <asp:DropDownList ID="DropDownList1" runat="server">
@@ -19,7 +28,7 @@
     From: <input type="text" id="datepickerFrom"/>   To: <input type="text" id="datepickerTo"/><br /><br />
 
     Time Available:<br />
-    From: <input type="text" id="timepickerFrom">   To: <input type="text" id="timepickerTo"><br /><br />
+    From: <input type="text" id="timepickerFrom"/>   To: <input type="text" id="timepickerTo"/><br /><br />
 
     Description:<br />
     <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Height="115px" Width="316px"></asp:TextBox><br /><br />

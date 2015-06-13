@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic','ngOpenFB','facebook'])
+angular.module('starter', ['ionic','ngOpenFB','facebook','ionic-datepicker','ionic-timepicker'])
 .run(function ($ionicPlatform, ngFB) {
   ngFB.init({appId: '903664066366504'});
 //.run(function($ionicPlatform) {
@@ -55,4 +55,10 @@ angular.module('starter', ['ionic','ngOpenFB','facebook'])
      // use the shortcut in the initialize method directly.
      FacebookProvider.init('903664066366504');
   })
-;
+.config( [
+    '$compileProvider',
+    function( $compileProvider )
+    {   
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|chrome-extension|tel|geo):/);
+        // Angular before v1.2 uses $compileProvider.urlSanitizationWhitelist(...)
+    }]);
