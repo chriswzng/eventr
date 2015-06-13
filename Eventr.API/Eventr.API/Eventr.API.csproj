@@ -90,9 +90,9 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authorization\HttpAuthorizeAttribute.cs" />
-    <Compile Include="Contracts\Booking.cs" />
-    <Compile Include="Contracts\User.cs" />
-    <Compile Include="Contracts\Venue.cs" />
+    <Compile Include="Contracts\BookingContract.cs" />
+    <Compile Include="Contracts\UserContract.cs" />
+    <Compile Include="Contracts\VenueContract.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
