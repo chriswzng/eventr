@@ -18,41 +18,59 @@
 
     <ion-content class="has-header" ng-show="currentStep() == 1" style="background-image: url('img/numofpax.png'); text-align:center;">
         <div class="stepsInstruction">{{headerText[currentStep()]}}</div>
+
         <div class="row">
-            <div class="stepsLabels">
+            <div class="stepsLabels" style="padding-top: 0px">
+                <span>Location</span>
+            </div>
+        </div>
+
+        <div class="list" style="padding-top:10px;">
+            <label class="item item-input" style="max-width:70%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0; -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;">
+                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="location" />
+            </label>
+        </div>
+
+        <div class="row" style="padding-top: 0px">
+            <div class="stepsLabels" style="padding-top: 0px">
                 <span>Number of pax</span>
             </div>
         </div>
 
         <div class="list" style="padding-top:10px;">
-            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
+            <label class="item item-input" style="max-width:70%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0; -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;">
                 <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="paxRange" />
             </label>
         </div>
   
-         <div class="row">
-            <div class="stepsLabels">
+         <div class="row" style="padding-top: 0px">
+            <div class="stepsLabels" style="padding-top: 0px">
                 <span>Event Date</span>
+
             </div>
         </div>
 
          <div class="list" style="padding-top:10px;">
-            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
-                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="dateStart" />
-            </label>
+            <ionic-datepicker idate="dateStart" disablepreviousdates="true" class="center" callback="datePickerCallback">
+                <label class="item item-input" style="max-width:70%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0; -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;">
+                    <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" value="{{ dateStart | date:'dd - MM - yy' }}" />
+                </label>
+            </ionic-datepicker>
         </div>
 
 
-         <div class="row">
+         <div class="row" style="padding-top: 0px">
             <div style="color:#ffffff; font-size:25px;margin-left:auto; margin-right:auto; padding-top:0px;">
                 <span>to</span>
             </div>
         </div>
 
          <div class="list" style="padding-top:10px;">
-            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
-                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="dateEnd" />
-            </label>
+            <ionic-datepicker idate="dateEnd" disablepreviousdates="true" class="center" callback="datePickerCallback">
+                <label class="item item-input" style="max-width:70%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0; -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;">
+                    <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" value="{{ dateEnd | date:'dd - MM - yy' }}" />
+                </label>
+            </ionic-datepicker>
         </div>
 
         <div class="row">
@@ -62,21 +80,25 @@
         </div>
 
          <div class="list" style="padding-top:10px;">
-            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
-                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="dateEnd" />
-            </label>
+            <ionic-timepicker etime="slots[0].epochTime" format="slots[0].format" class="center" step="slots[0].step" callback="timePickerCallback">    
+                <label class="item item-input" style="max-width:70%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0; -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;">
+                    <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" value="{{(slots[1].epochTime*1000)-28800000 | date:'HH:mm a'}}" />
+                </label>
+            </ionic-timepicker>
         </div>
 
-         <div class="row">
+         <div class="row" style="padding-top: 0px">
             <div style="color:#ffffff; font-size:25px;margin-left:auto; margin-right:auto; padding-top:0px;">
                 <span>to</span>
             </div>
         </div>
 
          <div class="list" style="padding-top:10px;">
-            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
-                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="dateEnd" />
-            </label>
+            <ionic-timepicker etime="slots[1].epochTime" format="slots[1].format" class="center" step="slots[1].step" callback="timePickerCallback">
+                <label class="item item-input" style="max-width:70%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
+                    <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" value="{{(slots[1].epochTime*1000)-28800000 | date:'HH:mm a'}}" />
+                </label>
+            </ionic-timepicker>
         </div>
 
         <div class="bar bar-footer bar-dark" style="background-color:#000000; top:104%;">
@@ -86,13 +108,29 @@
     </ion-content>
 
     <ion-content class="has-header" ng-show="currentStep() == 2">
+        <div class="row" style="padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px; position: relative: left: 0; top: 0;">
+            <img src="img/mobile-list-of-venue-top-bg-crop.png" style="position: relative; top: 0; left: 0;"/>
+            <img src="img/building-icon.png" style="position: absolute; top: 75px; left: 10px;"/>
+            <span style="position: absolute; top: 90px; left: 70px; color:#ffffff; font-size: 25px;">List of Venues</span>
+        </div>
+
         <ion-list>
-            <ion-item ng-repeat="item in venues" class="item item-avatar">
-                <img ng-src="{{item.imageUrl}}" style="height:100px;">
-                <h2>{{item.name}}</h2>
-                <button class="button button-clear button-positive" ng-click="viewDetails(item.id)">
-  View
-</button>
+            <ion-item ng-repeat="item in venues" style="padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;" ng-click="viewDetails(item.id)">
+                <img ng-src="{{item.imageUrl}}" class="venueListAvatar">
+                <div>
+                    <span class="venueListLabel">{{item.name}}</span><br />
+                    <span class="venueListText">{{item.city}}, {{item.state}}</span><br />
+                    <div style="padding-top:10px;">
+                        <img src="img/rating-star.png" style="padding-left:10px; padding-top:5px; float: left;" />
+                        <img src="img/rating-star.png" style="padding-left:2px; padding-top:5px; float: left;" ng-repeat="star in item.stars" />
+                        <div style="text-align: right; padding-right:5px;">
+                            <span class="venueListCost">{{item.cost}}</span>
+                            <span style="font-size: 10px;"> per hour</span>
+                        </div>
+                    </div>
+                   <!--  <button class="button button-clear button-positive" ng-click="viewDetails(item.id)">View
+                    </button> -->
+                </div>
             </ion-item>
         </ion-list> 
     </ion-content>
