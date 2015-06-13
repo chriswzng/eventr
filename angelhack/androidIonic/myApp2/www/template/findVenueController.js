@@ -2,8 +2,8 @@ angular.module('starter')
 .controller('FindVenueController', function($scope, $ionicModal, $http, $state) {
     $scope.sliderIndex =0;
     $scope.headerText =[
-        'Step 1: What kind of event?',
-        'Step 2: How many are going?',
+        'Step 1: Select Event',
+        'Step 2: Enter details',
         'Step 3: Choose a venue'
     ]
 

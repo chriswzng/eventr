@@ -1,29 +1,86 @@
 <div ng-controller="FindVenueController">
 <div>
-    <div class="bar bar-header">
-        <div class="h1 title">{{headerText[currentStep()]}}</div>
+    <div class="bar bar-header bar-dark" style="background-color:#000000;">
+        <img src="img/Eventr-logo-transparent-white-text.png" style="max-height:80%;" />
     </div>
     
-    <ion-content class="has-header" ng-show="currentStep() == 0">
+    <ion-content class="has-header" ng-show="currentStep() == 0" style="text-align:center;">
+        <div class="stepsInstruction">{{headerText[currentStep()]}}</div>
         <ion-list >
             <ion-item ng-repeat="item in categories" class="imageTextSeperator">
                 <div class="wrapper" ng-click="selectCategory(item)">
-                    <img ng-src="{{item.imageUrl}}" style="width:100%">
+                    <img ng-src="{{item.imageUrl}}" style="width:100%;">
                     <div class="imageText h1 title">{{item.name}}</div>
                 </div>
             </ion-item>
         </ion-list>
     </ion-content>
 
-    <ion-content class="has-header" ng-show="currentStep() == 1">
-        <div class="list">
-            <label class="item item-input">
-                <input type="text" placeholder="No. of people e.g. 10, 10-15" ng-model="paxRange">
+    <ion-content class="has-header" ng-show="currentStep() == 1" style="background-image: url('img/numofpax.png'); text-align:center;">
+        <div class="stepsInstruction">{{headerText[currentStep()]}}</div>
+        <div class="row">
+            <div class="stepsLabels">
+                <span>Number of pax</span>
+            </div>
+        </div>
+
+        <div class="list" style="padding-top:10px;">
+            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
+                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="paxRange" />
             </label>
         </div>
   
+         <div class="row">
+            <div class="stepsLabels">
+                <span>Event Date</span>
+            </div>
+        </div>
+
+         <div class="list" style="padding-top:10px;">
+            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
+                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="dateStart" />
+            </label>
+        </div>
+
+
+         <div class="row">
+            <div style="color:#ffffff; font-size:25px;margin-left:auto; margin-right:auto; padding-top:0px;">
+                <span>to</span>
+            </div>
+        </div>
+
+         <div class="list" style="padding-top:10px;">
+            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
+                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="dateEnd" />
+            </label>
+        </div>
+
         <div class="row">
-            <button class="button button-light" style="width:100%"  ng-click="selectPax(paxRange)">Next</button>
+            <div class="stepsLabels" style="padding-top: 0px;">
+                <span>Event Time</span>
+            </div>
+        </div>
+
+         <div class="list" style="padding-top:10px;">
+            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
+                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="dateEnd" />
+            </label>
+        </div>
+
+         <div class="row">
+            <div style="color:#ffffff; font-size:25px;margin-left:auto; margin-right:auto; padding-top:0px;">
+                <span>to</span>
+            </div>
+        </div>
+
+         <div class="list" style="padding-top:10px;">
+            <label class="item item-input" style="max-width:35%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0;">
+                <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" ng-model="dateEnd" />
+            </label>
+        </div>
+
+        <div class="row">
+            <button class="button button-dark" style="width:80%; margin-left:auto; margin-right:auto; background-color:#000;"  ng-click="selectPax(paxRange)">Next</button>
         </div>
     </ion-content>
 

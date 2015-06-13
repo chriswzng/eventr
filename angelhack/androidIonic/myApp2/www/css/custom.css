@@ -67,3 +67,25 @@
   box-shadow: none;
   color: #FFFFFF;
 }
+
+.stepsInstruction {
+  color:#ffffff; 
+  background-color:#111; 
+  height: 30px; 
+  font-size: 15px;
+  padding-top: 3px;
+  padding-left: 10px;
+}
+
+.stepsLabels {
+  color:#ffffff; 
+  font-size: 30px;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-input {
+  color:#26a9e0; 
+  font-size: 20px;
+}
