@@ -45,9 +45,7 @@
       "longitude": 101.70561215789,
       "city": "Sultan Ismail",      
       "state": "Kuala Lumpur",
-<<<<<<< HEAD
-      "stars": [1,2]
-=======
+      "stars": [1,2],
       "cost": "RM 1000",
       "stars": [1,2],
       "suitableFor": "Birthday, Wedding, Conference, Seminar, Party, Meeting, Product Launch"
@@ -57,8 +55,8 @@
       "id":"4",
       "name":"The Bee Publika",
       "price":"RM 530",
-      "imageUrl":"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/v/t1.0-1/p160x160/998472_10202363849171194_1932967088_n.jpg?oh=843e6f7f785dd2d376ef534e9ea797e9&oe=56347376&__gda__=1445625734_0f664bf65424ca7600e70c901538dce1",
-      "bannerImg":"https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xat1/t31.0-8/11312575_10153874207904409_3017365069327963407_o.jpg",
+      "imageUrl":"img/thebee.jpg",
+      "bannerImg":"img/thebeebanner.jpg",
       "description":"With the hottest trends, delicious food, awesome music, high-energy environment and a rockin’ good time!",
       "rating":"4.5",
       "phone":"03-24193719",
@@ -74,8 +72,8 @@
       "id":"5",
       "name":"Ciao Ristorante",
       "price":"RM 2000",
-      "imageUrl":"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xap1/v/t1.0-1/p160x160/1186950_10151658750729482_1549014991_n.jpg?oh=bb545e1118615af251011bcbc59d91c3&oe=55E72DFB&__gda__=1442055530_bf4f3132ba9669a7d010b63c43e0f21c",
-      "bannerImg":"https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xpa1/t31.0-8/1522970_10151915380586051_1367034426_o.jpg",
+      "imageUrl":"img/ciao.jpg",
+      "bannerImg":"img/ciaobanner.jpg",
       "description":"With the hottest trends, delicious food, awesome music, high-energy environment and a rockin’ good time!",
       "rating":"4.5",
       "phone":"03-24193719",
@@ -91,8 +89,8 @@
       "id":"6",
       "name":"Aloft Kuala Lumpur Sentral",
       "price":"RM 2800",
-      "imageUrl":"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/p160x160/1013263_526770424067127_92961128_n.jpg?oh=9811c8b0f1411f60846a7fd4bbffb50c&oe=55F9AA1A&__gda__=1441641674_93ec8fa77a778558f3678e0aa885b299",
-      "bannerImg":"https://scontent-kul1-1.xx.fbcdn.net/hphotos-xta1/t31.0-8/11148480_848036661940500_3449923787446444080_o.jpg",
+      "imageUrl":"img/aloft.jpg",
+      "bannerImg":"img/aloftbanner.jpg",
       "description":"Celebrate your style at Aloft Kuala Lumpur, in the heart of the new central business district. The hopping Sentral district boasts the city’s biggest public transit hub—for easy airport access—plus banks and corporations, and stellar shopping options! Meet & mingle with friends at our w xyz(SM) bar, grab a sweet, savory, or healthy snack from re:fuel by Aloft(SM), our 24/7 pantry, or play in our re:mix(SM) lounge. Plus, you can always stay connected with complimentary hotel-wide wired and wireless Internet access!",
       "rating":"4.5",
       "phone":"03-24193719",
@@ -103,7 +101,6 @@
       "cost": "RM 1000",
       "stars": [1,2,3,4,5],
       "suitableFor": "Birthday, Wedding, Conference, Seminar, Party, Meeting, Product Launch"
->>>>>>> 6471f24fa086e1e8d61b9674c0334b57e85f86d9
    }
 
 ]
