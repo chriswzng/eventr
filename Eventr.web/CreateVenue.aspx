@@ -121,6 +121,7 @@
     </asp:DropDownList><br />
     <br />
 
-    <asp:Button ID="btnCreate" runat="server" Text="Create Venue for Rent" />
+    <asp:Button ID="btnCreate" runat="server" Text="Create Venue for Rent" OnClick="btnCreate_Click" />
+    <br /><br /><br /><br /><br />
 </asp:Content>
 

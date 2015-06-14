@@ -32,6 +32,7 @@
 
     Description:<br />
     <asp:TextBox ID="TextBox1" runat="server" TextMode="MultiLine" Height="115px" Width="316px"></asp:TextBox><br /><br />
-    <asp:Button ID="btnCreate" runat="server" Text="Create Event Service" />
+    <asp:Button ID="btnCreate" runat="server" Text="Create Event Service" OnClick="btnCreate_Click" />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </asp:Content>
 

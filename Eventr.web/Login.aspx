@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h1>Sign In</h1>
-    <table>
+    <table style="font-size:16pt;">
         <tr>
             <td>
                 Email:<br />
