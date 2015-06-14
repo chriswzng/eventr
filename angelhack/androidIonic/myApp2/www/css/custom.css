@@ -148,7 +148,12 @@
 }
 
 .confirmationLabels {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   padding-top: 10px;
+}
+
+.confirmationText {
+  font-size: 18px;
+  padding-left: 40px;
 }

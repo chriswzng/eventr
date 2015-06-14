@@ -25,10 +25,12 @@ angular.module('starter')
     }
  
     $scope.selectCategory = function(category){
+        $scope.$root.startDate = "14-06-2015";
         $state.go('findVenue.pax',{categoryId: category.id});
     }
  
-    $scope.selectPax = function(paxRange){
+    $scope.inputData = function(paxRange){
+        $scope.$root.paxRange = paxRange;
         $state.go('findVenue.pickVenue',{categoryId: $state.params.categoryId, paxRange: paxRange});
     }
 
@@ -65,6 +67,7 @@ $scope.datePickerCallback = function (val) {
     if(typeof(val)==='undefined'){      
         console.log('Date not selected');
     }else{
+        $scope.$root.startDate = val;
         console.log('Selected date is : ', val);
     }
 };

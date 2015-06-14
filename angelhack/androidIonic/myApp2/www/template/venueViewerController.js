@@ -14,19 +14,18 @@ angular.module('starter')
    //  }
 
    $http.get('json/venues.json').success(function(data){
-
-
     data.forEach(function(item){
-
       if(item.id == venueId){
         $scope.selectedVenue = item;
+        $scope.$root.locationName = item.name;
+        $scope.$root.price = item.price;
       }
     })
 
   });
 
    $scope.completeBooking = function(){
-
+    
     $state.go('bookingConfirmation', {venueId: $state.params.venueId});
    }
 
