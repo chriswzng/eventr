@@ -152,3 +152,9 @@
   font-weight: bold;
   padding-top: 10px;
 }
+
+button.button-black {
+  border-color: #111;
+  background-color: black;
+  color: white;
+}
