@@ -148,13 +148,12 @@
 }
 
 .confirmationLabels {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   padding-top: 10px;
 }
 
-button.button-black {
-  border-color: #111;
-  background-color: black;
-  color: white;
+.confirmationText {
+  font-size: 18px;
+  padding-left: 40px;
 }
