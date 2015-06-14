@@ -5,7 +5,7 @@
     </div>
     
     <ion-content class="has-header" ng-show="currentStep() == 0" style="text-align:center;">
-        <!-- <div class="stepsInstruction">{{headerText[currentStep()]}}</div> -->
+        <div class="stepsInstruction">{{headerText[currentStep()]}}</div>
         <ion-list >
             <ion-item ng-repeat="item in categories" class="imageTextSeperator">
                 <div class="wrapper" ng-click="selectCategory(item)">
@@ -18,7 +18,7 @@
 
     <ion-content class="has-header" ng-show="currentStep() == 1" style="background-image: url('img/numofpax.png'); text-align:center;">
     <div>
-        <!-- <div class="stepsInstruction">{{headerText[currentStep()]}}</div> -->
+        <div class="stepsInstruction">{{headerText[currentStep()]}}</div>
 
         <div class="row">
             <div class="stepsLabels" style="padding-top: 0px">
@@ -98,9 +98,9 @@
             </ionic-timepicker>
         </div>
 
-        <div class="bar bar-footer bar-dark" style="background-color:#000000; height:70px; top:107%">
-         <button class="button button-positive" style="margin-left:auto; margin-right:auto; padding-top 10px; width: 80%; height: 40px; background-color:#000000; top:10px; font-size:20px;"  ng-click="inputData(paxRange)">Continue</button> 
-    </div>
+        <div class="bar bar-footer bar-dark" style="background-color:#000000; top:101%; height: 70px;">
+            <button class="button button-dark" style="width:80%; margin-left:auto; margin-right:auto; background-color:#000;"  ng-click="inputData(paxRange)">Next</button>
+        </div>
     </div>
     </ion-content>
 

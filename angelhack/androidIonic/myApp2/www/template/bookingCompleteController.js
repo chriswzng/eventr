@@ -15,7 +15,7 @@ angular.module('starter')
 
   });
 
-   $scope.otherServices = function(){
+   $scope.makePayment = function(){
    	$state.go('otherServices');
    }
 

@@ -12,7 +12,8 @@
       "latitude": 3.1540300323989,
       "longitude": 101.70637882555,
       "city": "Jalan Bukit Bintang",
-      "state": "Kuala Lumpur",   
+      "state": "Kuala Lumpur",
+      "cost": "RM1000",      
       "suitableFor": "Birthday, Wedding, Conference, Seminar, Party, Meeting, Product Launch"
    },
    {  
@@ -27,7 +28,9 @@
       "price":"RM 1050",
       "latitude": 3.1540300323989,
       "longitude": 101.70637882555,
-      "city": "Jalan Bukit Bintang",      
+      "city": "Jalan Bukit Bintang",
+      "cost": "$1000",      
+      "cost": "RM 1000",      
       "stars": [1,2,3],      
       "suitableFor": "Birthday, Wedding, Conference, Seminar, Party, Meeting, Product Launch"
    },
