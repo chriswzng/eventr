@@ -1,24 +1,23 @@
 <div ng-controller="OtherServicesController">
-<div class="bar bar-header bar-stable">
-  <h1 class="title">Recommended services</h1>
-
-</div>
+ <div class="bar bar-header bar-dark" style="background-color:#000000;">
+        <img src="img/Eventr-logo-transparent-white-text.png" style="max-height:80%;" />
+    </div>
 <ion-content class="has-header">
-  <div>These are a list of services we found that might suit your event</div>
-  <ion-list>
-  <ion-item ng-repeat="item in services" class="item item-avatar">
-
-  <img ng-src="{{item.imageUrl}}">
-      <h2>{{item.name}}</h2>
-      <p>{{item.description}}</p>
-      <a class="button button-clear button-positive ion-ios-telephone" href="tel:{{selectedVenue.phone}}">
-  {{item.phone}}
-</a>
-
-  </ion-item>
-</ion-list>
-<button class="button button-full button-positive" ng-click="completeStep()">
-  Continue
-</button>
+  <div style="background-color:#222222; color:#ffffff; font-size:18px; padding-left:10px; padding-top:5px; padding-bottom: 5px;">
+    <span>List of services that might suit your event</span>
+  </div>
+        <ion-list>
+            <ion-item ng-repeat="item in services" style="padding-left:0px;padding-right:0px;padding-top:0px;padding-bottom:0px;">
+                <img ng-src="{{item.imageUrl}}" class="venueListAvatar">
+                <div>
+                    <span class="venueListLabel">{{item.name}}</span><br />
+                    <span class="venueListText">{{item.description}}</span><br />
+                    <a class="button button-clear button-positive ion-ios-telephone" href="tel:{{selectedVenue.phone}}">{{item.phone}}</a>
+                </div>
+            </ion-item>
+        </ion-list> 
 </ion-content>
+<div class="bar bar-footer bar-dark" style="background-color:#000000; height:70px;">
+         <button class="button button-positive" style="margin-left:auto; margin-right:auto; padding-top 10px; width: 80%; height: 40px; background-color:#000000; top:10px; font-size:18px;"  ng-click="backMain()">Maybe next time</button> 
+    </div>
 </div>

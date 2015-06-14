@@ -8,8 +8,8 @@ angular.module('starter')
 
   });
 
-   $scope.completeStep = function(){
-    $state.go('eventBriteCreator');
-   }
+   $scope.backMain  =function(){
+    $state.go('getStarted');
+    }
 
 });
