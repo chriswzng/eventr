@@ -61,12 +61,16 @@ angular.module('starter')
                 state: item.location != undefined ? item.location.city: "",
                 latitude: item.location != undefined ? item.location.latitude : 0,
                 longitude: item.location !=undefined ? item.location.longitude: 0,
-                description: item.description
+                description: item.description,
+                price: "RM "+ Math.round(Math.random() * (600 - 120) + 120),
+                stars: new Array( Math.round(Math.random() * (5 - 1) + 1)),
+                isFacebook: true,
+                bannerImg: item.cover == undefined ? 'img/default.png' : item.cover.photo
             });
          });
     });
     }
-//getLoginStatus();
+getLoginStatus();
     function getLoginStatus() {
       Facebook.getLoginStatus(function(response) {
         if(response.status === 'connected') {

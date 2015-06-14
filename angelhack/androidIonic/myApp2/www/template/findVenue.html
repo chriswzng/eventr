@@ -116,7 +116,7 @@
                     <span class="venueListText">{{item.city}}, {{item.state}}</span><br />
                     <div style="padding-top:10px;">
                         <img src="img/rating-star.png" style="padding-left:10px; padding-top:5px; float: left;" />
-                        <img src="img/rating-star.png" style="padding-left:2px; padding-top:5px; float: left;" ng-repeat="star in item.stars" />
+                        <img src="img/rating-star.png" style="padding-left:2px; padding-top:5px; float: left;" ng-repeat="star in item.stars track by $index" />
                         <div style="text-align: right; padding-right:10px;">
                             <span class="venueListCost">{{item.price}}</span>
                             <span style="font-size: 10px;"> per hour</span>
