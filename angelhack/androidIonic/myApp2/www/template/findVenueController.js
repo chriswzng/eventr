@@ -1,5 +1,5 @@
 angular.module('starter')
-.controller('FindVenueController', function($scope, $ionicModal, $http, $state) {
+.controller('FindVenueController', function($scope, $ionicModal, $http, $state, Facebook) {
     $scope.sliderIndex =0;
     $scope.headerText =[
         'Step 1: Select Event',
@@ -46,20 +46,32 @@ angular.module('starter')
    }
 
   function findPlaces(accessToken){
-      $http.get('https://graph.facebook.com/v2.3/search?q=hotel kl&type=place&access_token='+accessToken).success(function(data){
-         $scope.venues = data.data;
+      $http.get('https://graph.facebook.com/v2.3/search?q=cafe kuala lumpur pub&type=place&access_token='+accessToken).success(function(data){
+         data.data.forEach(function(item){
+
+            $scope.venues.push({
+                name: item.name, 
+                id: item.id, 
+                imageUrl: 'https://graph.facebook.com/'+item.id+'/picture?type=large', 
+                city: item.location != undefined ? item.location.street : "", 
+                state: item.location != undefined ? item.location.city: "",
+                latitude: item.location != undefined ? item.location.latitude : 0,
+                longitude: item.location !=undefined ? item.location.longitude: 0,
+                description: item.description
+            });
+         });
     });
     }
 //getLoginStatus();
-    // function getLoginStatus() {
-    //   Facebook.getLoginStatus(function(response) {
-    //     if(response.status === 'connected') {
-    //        findPlaces(response.authResponse.accessToken);
+    function getLoginStatus() {
+      Facebook.getLoginStatus(function(response) {
+        if(response.status === 'connected') {
+           findPlaces(response.authResponse.accessToken);
 
-    //     } else {
-    //     }
-    //   });
-    // }
+        } else {
+        }
+      });
+    }
 
 $scope.datePickerCallback = function (val) {
     if(typeof(val)==='undefined'){      
