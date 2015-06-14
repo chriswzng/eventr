@@ -5,7 +5,6 @@
     </div>
     
     <ion-content class="has-header" ng-show="currentStep() == 0" style="text-align:center;">
-        <div class="stepsInstruction">{{headerText[currentStep()]}}</div>
         <ion-list >
             <ion-item ng-repeat="item in categories" class="imageTextSeperator">
                 <div class="wrapper" ng-click="selectCategory(item)">
@@ -18,8 +17,6 @@
 
     <ion-content class="has-header" ng-show="currentStep() == 1" style="background-image: url('img/numofpax.png'); text-align:center;">
     <div>
-        <div class="stepsInstruction">{{headerText[currentStep()]}}</div>
-
         <div class="row">
             <div class="stepsLabels" style="padding-top: 0px">
                 <span>Location</span>
