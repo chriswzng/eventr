@@ -15,6 +15,7 @@ angular.module('starter')
         $scope.selectedVenue = item;
         $scope.$root.locationName = item.name;
         $scope.$root.price = item.price;
+        return;
       }
     })
 

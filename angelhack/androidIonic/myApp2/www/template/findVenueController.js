@@ -27,6 +27,7 @@ angular.module('starter')
  
     $scope.selectCategory = function(category){
         $scope.$root.startDate = "14-06-2015";
+        $scope.$root.endDate = "15-06-2015";
         $state.go('findVenue.pax',{categoryId: category.id});
     }
  
