@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MyMasterPage" %>
 
 <!DOCTYPE html>
 
@@ -21,6 +21,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form id="form1" runat="server">
     <div id="wrapper">
 		<div id="header" style="background-color:#000000;">
             <div class="box">
@@ -30,26 +31,25 @@
                             <a href="Default.aspx"><img src="Images/Eventr-logo-transparent-white-text.png" border="0" /></a>
                         </td>
                         <td style="background-color:#000000; height:20px; text-align:right; padding: 10px 15px; color: #fff; font-size:16pt;">
-                            <a href="Login.aspx">Sign In</a>
-                        </td>
+                            <asp:PlaceHolder ID="PlaceHolder1" runat="server"><a href="Login.aspx">Sign In</a></asp:PlaceHolder>
+                            <asp:PlaceHolder ID="PlaceHolder2" runat="server" Visible="false"><a href="MainMenu.aspx">Welcome Derek</a> | <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Log out</asp:LinkButton></asp:PlaceHolder>
+                        </td>/
                     </tr>
                 </table>
             </div>
 		</div>
-		<div id="content">
-            <form id="form1" runat="server">
-                <table style="width:100%;" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td style="text-align:left;padding: 10px 15px;" colspan="2">
-                            <div style="max-width:1230px;margin: 0 auto;">
-                                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+		<div id="content" runat="server">
+            <table style="width:100%;" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="text-align:left;padding: 10px 15px;" colspan="2">
+                        <div style="max-width:1230px;margin: 0 auto; height: 100%; background-color:#ffffff;padding:10px;">
+                            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
-                                </asp:ContentPlaceHolder>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </form>
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </td>
+                </tr>
+            </table>
 		</div>
 		<div id="footer" style="background-color:black; color:#ffffff;">
             <div class="box">
@@ -68,6 +68,6 @@
 				
 			</div>
 		</div>
-	</div>
+    </form>
 </body>
 </html>
