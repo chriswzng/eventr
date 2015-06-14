@@ -81,7 +81,9 @@ getLoginStatus();
       });
     }
 
-$scope.datePickerCallback = function (val) {
+$scope.fromDate = new Date();
+
+$scope.fromDatePickerCallback = function (val) {
     if(typeof(val)==='undefined'){      
         console.log('Date not selected');
     }else{
@@ -90,14 +92,34 @@ $scope.datePickerCallback = function (val) {
     }
 };
 
+$scope.toDate = new Date();
+
+$scope.toDatePickerCallback = function (val) {
+    if(typeof(val)==='undefined'){      
+        console.log('Date not selected');
+    }else{
+        $scope.$root.endDate = val;
+        console.log('Selected date is : ', val);
+    }
+};
+
 $scope.slots = [{epochTime: 12600, format: 12, step: 15},{epochTime: 12600, format: 12, step: 15}];
 
-$scope.timePickerCallback = function (val) {
+$scope.timeFromPickerCallback = function (val) {
   if (typeof (val) === 'undefined') {
     console.log('Time not selected');
   } else {
+    $scope.$root.startTime = val;
     console.log('Selected time is : ', val);    // `val` will contain the selected time in epoch
   }
 };
 
+$scope.timeToPickerCallback = function (val) {
+  if (typeof (val) === 'undefined') {
+    console.log('Time not selected');
+  } else {
+    $scope.$root.endTime = val;
+    console.log('Selected time is : ', val);    // `val` will contain the selected time in epoch
+  }
+};
 });
