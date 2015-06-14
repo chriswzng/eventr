@@ -49,10 +49,8 @@
         </div>
 
          <div class="list" style="padding-top:10px;">
-            <ionic-datepicker idate="dateStart" disablepreviousdates="true" class="center" callback="datePickerCallback">
-                <label class="item item-input" style="max-width:70%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0; -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;">
-                    <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" value="{{ dateStart | date:'dd - MM - yy' }}" />
-                </label>
+            <ionic-datepicker idate="fromDate" disablepreviousdates="true" class="center" callback="fromDatePickerCallback">
+                <button class="button button-positive" style="max-width:70%; background-color:rgba(0,0,0,0.8); border-color: #000000; border-radius:10px; color: #26a9e0; font-size: 24px;width:280px;"> {{ fromDate | date:'dd - MM - yy' }} </button>
             </ionic-datepicker>
         </div>
 
@@ -64,10 +62,8 @@
         </div>
 
          <div class="list" style="padding-top:10px;">
-            <ionic-datepicker idate="dateEnd" disablepreviousdates="true" class="center" callback="datePickerCallback">
-                <label class="item item-input" style="max-width:70%; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0; -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;">
-                    <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" value="{{ dateEnd | date:'dd - MM - yy' }}" />
-                </label>
+            <ionic-datepicker idate="toDate" disablepreviousdates="true" class="center" callback="toDatePickerCallback">
+                <button class="button button-positive" style="max-width:70%; background-color:rgba(0,0,0,0.8); border-color: #000000; border-radius:10px; color: #26a9e0; font-size: 24px;width:280px;"> {{ toDate | date:'dd - MM - yy' }} </button>
             </ionic-datepicker>
         </div>
 
@@ -77,25 +73,25 @@
             </div>
         </div>
 
-         <div class="list" style="padding-top:10px; width: 100%; display: inline-block">
-            <ionic-timepicker etime="slots[0].epochTime" format="slots[0].format" step="slots[0].step" callback="timePickerCallback">    
-                <label class="item item-input" style="max-width:42%; float: left; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0; -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;">
-                    <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" value="{{(slots[0].epochTime*1000)-28800000 | date:'HH:mm a'}}" />
-                </label>
-            </ionic-timepicker>
-
-            <div style="color:#ffffff; font-size:25px;margin-left:auto; margin-right:auto; padding-top:10px; padding-left: 15px; float: left;">
-                <span>to</span>
+         <div class="row" style="padding-top:10px;">
+            <div class="col col-33">
+                <ionic-timepicker etime="slots[0].epochTime" format="slots[0].format" step="slots[0].step" callback="timeFromPickerCallback">    
+                    <button class="button button-positive" style="background-color:rgba(0,0,0,0.8); border-color: #000000; border-radius:10px; color: #26a9e0; font-size: 18px;"> {{(slots[0].epochTime*1000)-28800000 | date:'HH:mm a'}} </button>
+                </ionic-timepicker>
             </div>
 
-            <ionic-timepicker etime="slots[1].epochTime" format="slots[1].format" step="slots[1].step" callback="timePickerCallback">
-                <label class="item item-input" style="max-width:42%; float: right; margin-left:auto; margin-right:auto; background-color:rgba(0,0,0,0.7); border-color:#000; color:#26a9e0; -moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;">
-                    <input type="text" style="color:#26a9e0; font-size:25px; text-align:center;" value="{{(slots[1].epochTime*1000)-28800000 | date:'HH:mm a'}}" />
-                </label>
-            </ionic-timepicker>
+            <div class="col col-33" style="padding-top:15px;">
+                <span style="color:#ffffff;font-size:18pt;">to</span>
+            </div>
+
+            <div class="col col-33">
+                <ionic-timepicker etime="slots[1].epochTime" format="slots[1].format" step="slots[1].step" callback="timeToPickerCallback">
+                    <button class="button button-positive" style="background-color:rgba(0,0,0,0.8); border-color: #000000; border-radius:10px; color: #26a9e0; font-size: 18px;"> {{(slots[1].epochTime*1000)-28800000 | date:'HH:mm a'}} </button>
+                </ionic-timepicker>
+            </div>
         </div>
 
-          <div class="bar bar-footer bar-dark" style="background-color:#000000; height:70px; top:96%">
+          <div class="bar bar-footer bar-dark" style="background-color:#000000; height:70px; top:100%">
          <button class="button button-positive" style="margin-left:auto; margin-right:auto; padding-top 10px; width: 80%; height: 40px; background-color:#000000; top:10px; font-size:18px;"  ng-click="inputData(paxRange)">Continue</button> 
     </div>
     </div>
