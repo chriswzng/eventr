@@ -8,7 +8,8 @@ angular.module('starter')
     ]
 
     $scope.paxRange = "";
-
+    $scope.$root.startTime = "08:30 AM";
+    $scope.$root.endTime = "12:30 PM";
     $scope.currentStep = function(){
         if($state.params.paxRange != undefined && $state.params.paxRange != "" ){
             return 2;
@@ -44,6 +45,7 @@ angular.module('starter')
 
    
    $scope.viewDetails = function(venueId){
+
         $state.go('venueViewer', {venueId: venueId});
    }
 
